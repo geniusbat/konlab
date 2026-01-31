@@ -33,8 +33,9 @@ def _read_reqs(path: Path) -> List[str]:
 _REQUIREMENTS: List[str] = _read_reqs(Path("requirements.txt"))
 _REQUIREMENTS_DEV: List[str] = _read_reqs(Path("requirements_dev.txt"))
 
+#TODO: Setup with proper data
 setup(
-    name="Konsave",
+    name="Konlab",
     use_scm_version=True,
     setup_requires=["setuptools_scm"],
     author="Prayag Jain",
@@ -42,7 +43,7 @@ setup(
     description="A program that lets you save your Plasma configuration in an instant!",
     long_description=_read_desc(),
     long_description_content_type="text/markdown",
-    url="https://www.github.com/prayag2/konsave/",
+    url="TODO:",
     packages=find_packages(),
     package_data={"config": ["conf.yaml"]},
     include_package_data=True,
@@ -56,5 +57,5 @@ setup(
         "Intended Audience :: End Users/Desktop",
         "Programming Language :: Python",
     ],
-    entry_points={"console_scripts": ["konsave = konsave.__main__:main"]},
+    entry_points={"console_scripts": ["konlab = konlab.__main__:main"]},
 )

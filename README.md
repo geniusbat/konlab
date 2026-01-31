@@ -1,5 +1,6 @@
-<h1 align=center> Konsave (Save Linux Customization) </h1>
-<p align=center>A CLI program that will let you save and apply your Linux customizations with just one command! Konsave also lets you share your dot files to your friends in an instant! It officially supports KDE Plasma but it can be used on all other desktop environments too!</p>
+<h1 align=center> Konlab (Konlab for your homelab!) </h1>
+<p align=center>A CLI program based on Konlab that is rather oriented on 
+ that will let you save and apply your Linux customizations with just one command! Konlab also lets you share your dot files to your friends in an instant! It officially supports KDE Plasma but it can be used on all other desktop environments too!</p>
 
 ---
 
@@ -9,50 +10,52 @@
 
 ---
 
-## Installation
+## Installation -- TODO: Review
 Install from PyPI using pip  
-`python -m pip install konsave`
+`python -m pip install konlab`
 
 Install from PyPI using pipx  
-`pipx install konsave`
+`pipx install konlab`
 
-## Usage
+## Usage 
 ### Get Help
-`konsave -h` or `konsave --help`
+`konlab -h` or `konlab --help`
 ### Save current configuration as a profile
-`konsave -s <profile name>` or `konsave --save <profile name>`
+`konlab -s <profile name>` or `konlab --save <profile name>`
 ### Overwrite an already saved profile
-`konsave -s <profile name> -f` or `konsave -s <profile name> --force `
+`konlab -s <profile name> -f` or `konlab -s <profile name> --force `
 ### List all profiles
-`konsave -l` or `konsave --list`
+`konlab -l` or `konlab --list`
 ### Remove a profile
-`konsave -r <profile name>` or `konsave --remove <profile name>`
+`konlab -r <profile name>` or `konlab --remove <profile name>`
 ### Apply a profile
-`konsave -a <profile name>` or `konsave --apply <profile name>`
+`konlab -a <profile name>` or `konlab --apply <profile name>`
 You may need to log out and log in to see all the changes.  
 ### Export a profile as a ".knsv" file to share it with your friends!
-`konsave -e <profile name>` or `konsave --export-profile <profile name>`
+`konlab -e <profile name>` or `konlab --export-profile <profile name>`
 ### Export a profile, setting the output dir and archive name
-`konsave -e <profile name> -d <archive directory> -n <archive name>`
+`konlab -e <profile name> -d <archive directory> -n <archive name>`
 or
-`konsave --export-profile <profile name> --archive-directory <archive directory> --export-name <export name>`
+`konlab --export-profile <profile name> --archive-directory <archive directory> --export-name <export name>`
 ### Export a profile, overwrite files if they already exist
-`konsave -e <profile name> -f` or `konsave --export-profile <profile name> --force`
+`konlab -e <profile name> -f` or `konlab --export-profile <profile name> --force`
 *note: without --force, the export will be appended with the date and time to ensure unique naming and no data is overwritten
 ### Import a ".knsv" file
-`konsave -i <path to the file>` or `konsave --import-profile <path to the file>`
+`konlab -i <path to the file>` or `konlab --import-profile <path to the file>`
 ### Show current version
-`konsave -v` or `konsave --version`  
+`konlab -v` or `konlab --version`  
 ### Wipe all profiles
-`konsave -w` or `konsave --wipe`
+`konlab -w` or `konlab --wipe`
 
   
 ---
-  
+
+
+## Old from previous README: TODO: Update with new guide
 
 ## Editing the configuration file
-You can make changes to Konsave's configuration file according to your needs. The configuration file is located in `~/.config/konsave/conf.yaml`.
-When using Konsave for the first time, you'll be prompted to enter your desktop environment.  
+You can make changes to Konlab's configuration file according to your needs. The configuration file is located in `~/.config/konlab/conf.yaml`.
+When using Konlab for the first time, you'll be prompted to enter your desktop environment.  
 For KDE Plasma users, the configuration file will be pre-configured.
 
 ### Format
@@ -122,7 +125,7 @@ save:
 ---
 
 ## Contributing
-Please read [CONTRIBUTION.md](https://github.com/Prayag2/konsave/blob/master/CONTRIBUTION.md) for info about contributing. 
+This is a very opinionated project that satisfies most of MY needs. As it uses Prayag2/konlab as upstream (https://github.com/Prayag2/konlab/) I think any effort will be much appreciated there.
 
 ## License
 This project uses GNU General Public License 3.0

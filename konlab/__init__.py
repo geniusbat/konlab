@@ -1,4 +1,4 @@
-"""Top-level Konsave package."""
+"""Top-level Konlab package."""
 
 from importlib.metadata import distribution, PackageNotFoundError
 
