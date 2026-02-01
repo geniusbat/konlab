@@ -134,7 +134,7 @@ LOG_CONFIG = {
                 "level": "DEBUG",
                 "formatter": "standard",
                 "class": "logging.handlers.RotatingFileHandler",
-                "filename": f"{LOGS_FILE}.default",
+                "filename": f"{LOGS_FILE}",
                 "mode": "a",
                 "maxBytes": 1048576,
                 "backupCount": 4
