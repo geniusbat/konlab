@@ -1,0 +1,23 @@
+---
+# This is the configuration file for konlab.
+# Please make sure it follows the correct format for proper working of konlab.
+# The format should be:
+# ---
+
+#TODO: Add format
+# ...
+# You can use these variables and functions in the locations of different entries:
+# $HOME: the home directory
+# $PROFILES_DIR: directory where all profiles are saved
+# $CONFIG_DIR: refers to "$HOME/.config/"
+# $KONSAVE_DIR: the location where all Konlab files are stored ("$CONFIG_DIR/konlab").
+# ${ENDS_WITH="text"}: for folders with different names on different computers but their names end with the same thing.
+# The best example for this is the ".default-release" folder for firefox.
+# ${BEGINS_WITH="text"}: for folders with different names on different computers but their names start with the same thing.
+
+# The following files will be saved in your profiles
+profile_1:
+    test_1:
+        location: "/home/zeus/Projects/Programacion/konlab/Konlab.egg-info"
+        files:
+            - "entry_points.txt"

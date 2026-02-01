@@ -1,0 +1,590 @@
+HOLA
+2026-02-01 18:12:17,989 [INFO] root: HOLA
+INFO - 2026-02-01 18:12:44,458: HOLA
+INFO (2026-02-01 18:13:00,922): HOLA
+2026-02-01 18:15:15,065 [INFO]: HOLA
+2026-02-01 18:15:30,044 [INFO]: HOLA
+2026-02-01 18:17:27,367 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 18:17:27,367 [INFO]: HOLA TEST
+2026-02-01 18:27:02,794 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 18:27:02,794 [ERROR]: Exception raised when running funcs.py
+Traceback (most recent call last):
+  File "/home/zeus/Projects/Programacion/konlab/venv/lib64/python3.14/site-packages/konlab/funcs.py", line 37, in inner_func
+    function = func(*args, **kwargs)
+  File "/home/zeus/Projects/Programacion/konlab/venv/lib64/python3.14/site-packages/konlab/funcs.py", line 135, in list_profiles
+    raise UserWarning("HOLA MUNDO")
+UserWarning: HOLA MUNDO
+2026-02-01 18:37:34,253 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 18:37:34,253 [INFO]: Starting export of profile profile_1 to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1
+2026-02-01 18:37:34,253 [DEBUG]: For entry test_1:
+2026-02-01 18:37:34,253 [DEBUG]: Exporting "entry_points.txt"...
+2026-02-01 18:37:34,254 [WARNING]: WARNING: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 seems to be empty! Proceeding anyways
+2026-02-01 18:37:34,254 [INFO]: Creating archive
+2026-02-01 18:37:34,257 [INFO]: Successfully exported to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar
+2026-02-01 18:38:42,733 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 18:38:42,733 [INFO]: Starting export of profile profile_1 to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1
+2026-02-01 18:38:42,733 [DEBUG]: For entry test_1:
+2026-02-01 18:38:42,733 [DEBUG]: Exporting "entry_points.txt"...
+2026-02-01 18:38:42,734 [WARNING]: WARNING: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 seems to be empty! Proceeding anyways
+2026-02-01 18:38:42,734 [INFO]: Creating archive
+2026-02-01 18:38:42,736 [INFO]: Successfully exported to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar
+2026-02-01 18:38:53,590 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 18:38:53,590 [INFO]: Starting export of profile profile_1 to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1
+2026-02-01 18:38:53,590 [DEBUG]: For entry test_1:
+2026-02-01 18:38:53,590 [DEBUG]: Exporting "entry_points.txt"...
+2026-02-01 18:38:53,591 [WARNING]: WARNING: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 seems to be empty! Proceeding anyways
+2026-02-01 18:38:53,591 [INFO]: Creating archive
+2026-02-01 18:38:53,593 [INFO]: Successfully exported to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar
+2026-02-01 18:50:00,157 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 18:50:20,778 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 18:50:20,778 [INFO]: Starting export of profile profile_1 to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1
+2026-02-01 18:50:20,778 [DEBUG]: For entry test_1:
+2026-02-01 18:50:20,778 [DEBUG]: Exporting "entry_points.txt"...
+2026-02-01 18:50:20,778 [WARNING]: WARNING: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 seems to be empty! Proceeding anyways
+2026-02-01 18:50:20,778 [INFO]: Creating archive
+2026-02-01 18:50:20,782 [INFO]: Successfully exported to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar
+2026-02-01 18:50:30,163 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 18:50:30,163 [INFO]: Starting export of profile profile_1 to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1
+2026-02-01 18:50:30,163 [DEBUG]: For entry test_1:
+2026-02-01 18:50:30,163 [DEBUG]: Exporting "entry_points.txt"...
+2026-02-01 18:50:30,163 [WARNING]: WARNING: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 seems to be empty! Proceeding anyways
+2026-02-01 18:50:30,163 [INFO]: Creating archive
+2026-02-01 18:50:30,165 [INFO]: Successfully exported to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.zip
+2026-02-01 18:50:38,147 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 18:50:38,147 [INFO]: Starting export of profile profile_1 to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1
+2026-02-01 18:50:38,147 [DEBUG]: For entry test_1:
+2026-02-01 18:50:38,147 [DEBUG]: Exporting "entry_points.txt"...
+2026-02-01 18:50:38,147 [WARNING]: WARNING: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 seems to be empty! Proceeding anyways
+2026-02-01 18:50:38,147 [INFO]: Successfully exported to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.null
+2026-02-01 18:50:44,836 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 18:50:44,836 [INFO]: Starting export of profile profile_1 to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1
+2026-02-01 18:50:44,836 [DEBUG]: For entry test_1:
+2026-02-01 18:50:44,836 [DEBUG]: Exporting "entry_points.txt"...
+2026-02-01 18:50:44,836 [WARNING]: WARNING: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 seems to be empty! Proceeding anyways
+2026-02-01 18:50:44,837 [ERROR]: Exception raised when running funcs.py
+Traceback (most recent call last):
+  File "/home/zeus/Projects/Programacion/konlab/venv/lib64/python3.14/site-packages/konlab/funcs.py", line 38, in inner_func
+    function = func(*args, **kwargs)
+  File "/home/zeus/Projects/Programacion/konlab/venv/lib64/python3.14/site-packages/konlab/funcs.py", line 235, in export
+    raise UserWarning(f"Specified format {archive_format} isn't valid, ensure it is in the following list: {available_formats}")
+UserWarning: Specified format xxx isn't valid, ensure it is in the following list: ['bztar', 'gztar', 'tar', 'xztar', 'zip', 'zstdtar']
+2026-02-01 18:52:21,676 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 18:52:21,676 [INFO]: Starting export of profile profile_1 to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1
+2026-02-01 18:52:21,676 [DEBUG]: For entry test_1:
+2026-02-01 18:52:21,676 [DEBUG]: Exporting "entry_points.txt"...
+2026-02-01 18:52:21,677 [WARNING]: WARNING: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 seems to be empty! Proceeding anyways
+2026-02-01 18:52:21,677 [INFO]: Successfully exported to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.null
+2026-02-01 18:52:25,322 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 18:52:25,323 [ERROR]: Exception raised when running funcs.py
+Traceback (most recent call last):
+  File "/home/zeus/Projects/Programacion/konlab/venv/lib64/python3.14/site-packages/konlab/funcs.py", line 38, in inner_func
+    function = func(*args, **kwargs)
+  File "/home/zeus/Projects/Programacion/konlab/venv/lib64/python3.14/site-packages/konlab/funcs.py", line 175, in export
+    raise UserWarning(f"Specified format {archive_format} isn't valid, ensure it is in the following list: {available_formats}")
+UserWarning: Specified format xx isn't valid, ensure it is in the following list: ['bztar', 'gztar', 'tar', 'xztar', 'zip', 'zstdtar']
+2026-02-01 18:53:55,890 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 18:53:55,890 [INFO]: Starting export of profile profile_1 to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1
+2026-02-01 18:53:55,890 [DEBUG]: For entry test_1:
+2026-02-01 18:53:55,890 [DEBUG]: Exporting "entry_points.txt"...
+2026-02-01 18:53:55,890 [WARNING]: WARNING: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 seems to be empty! Proceeding anyways
+2026-02-01 18:53:55,890 [INFO]: Successfully exported to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1
+2026-02-01 18:54:10,323 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 18:54:10,323 [INFO]: Starting export of profile profile_1 to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1
+2026-02-01 18:54:10,323 [DEBUG]: For entry test_1:
+2026-02-01 18:54:10,323 [DEBUG]: Exporting "entry_points.txt"...
+2026-02-01 18:54:10,323 [WARNING]: WARNING: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 seems to be empty! Proceeding anyways
+2026-02-01 18:54:10,323 [INFO]: Successfully exported to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1
+2026-02-01 18:54:19,844 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 18:54:19,845 [ERROR]: Exception raised when running funcs.py
+Traceback (most recent call last):
+  File "/home/zeus/Projects/Programacion/konlab/venv/lib64/python3.14/site-packages/konlab/funcs.py", line 38, in inner_func
+    function = func(*args, **kwargs)
+  File "/home/zeus/Projects/Programacion/konlab/venv/lib64/python3.14/site-packages/konlab/funcs.py", line 175, in export
+    raise UserWarning(f"Specified format {archive_format} isn't valid, ensure it is in the following list: {available_formats}")
+UserWarning: Specified format nxx isn't valid, ensure it is in the following list: ['bztar', 'gztar', 'tar', 'xztar', 'zip', 'zstdtar']
+2026-02-01 18:54:43,772 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 18:54:43,772 [ERROR]: Exception raised when running funcs.py
+Traceback (most recent call last):
+  File "/home/zeus/Projects/Programacion/konlab/venv/lib64/python3.14/site-packages/konlab/funcs.py", line 38, in inner_func
+    function = func(*args, **kwargs)
+  File "/home/zeus/Projects/Programacion/konlab/venv/lib64/python3.14/site-packages/konlab/funcs.py", line 175, in export
+    raise UserWarning(f"Specified format {archive_format} isn't valid, ensure it is in the following list: {available_formats}")
+UserWarning: Specified format nxx isn't valid, ensure it is in the following list: ['bztar', 'gztar', 'tar', 'xztar', 'zip', 'zstdtar']
+2026-02-01 18:54:50,497 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 18:54:50,497 [ERROR]: Exception raised when running funcs.py
+Traceback (most recent call last):
+  File "/home/zeus/Projects/Programacion/konlab/venv/lib64/python3.14/site-packages/konlab/funcs.py", line 38, in inner_func
+    function = func(*args, **kwargs)
+  File "/home/zeus/Projects/Programacion/konlab/venv/lib64/python3.14/site-packages/konlab/funcs.py", line 175, in export
+    raise UserWarning(f"Specified format {archive_format} isn't valid, ensure it is in the following list: {available_formats}")
+UserWarning: Specified format nxx isn't valid, ensure it is in the following list: ['bztar', 'gztar', 'tar', 'xztar', 'zip', 'zstdtar']
+2026-02-01 18:54:57,470 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 18:54:57,470 [INFO]: Starting export of profile profile_1 to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1
+2026-02-01 18:54:57,470 [DEBUG]: For entry test_1:
+2026-02-01 18:54:57,470 [DEBUG]: Exporting "entry_points.txt"...
+2026-02-01 18:54:57,470 [INFO]: Creating archive
+2026-02-01 18:54:57,474 [INFO]: Successfully exported to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar
+2026-02-01 18:59:11,285 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 18:59:11,285 [INFO]: Starting export of profile profile_1 to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1
+2026-02-01 18:59:11,286 [DEBUG]: For entry test_1:
+2026-02-01 18:59:11,286 [DEBUG]: Exporting "entry_points.txt"...
+2026-02-01 18:59:11,286 [INFO]: Successfully exported to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1
+2026-02-01 18:59:18,285 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 18:59:18,285 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_101022026_185918
+2026-02-01 18:59:18,285 [INFO]: Starting export of profile profile_1 to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_101022026_185918
+2026-02-01 18:59:18,286 [DEBUG]: For entry test_1:
+2026-02-01 18:59:18,286 [DEBUG]: Exporting "entry_points.txt"...
+2026-02-01 18:59:18,286 [INFO]: Creating archive
+2026-02-01 18:59:18,289 [INFO]: Successfully exported to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_101022026_185918.tar
+2026-02-01 18:59:38,336 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 18:59:38,337 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_101022026_185938
+2026-02-01 18:59:38,337 [INFO]: Starting export of profile profile_1 to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_101022026_185938
+2026-02-01 18:59:38,337 [DEBUG]: For entry test_1:
+2026-02-01 18:59:38,337 [DEBUG]: Exporting "entry_points.txt"...
+2026-02-01 18:59:38,337 [INFO]: Successfully exported to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_101022026_185938
+2026-02-01 19:01:00,636 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:01:00,636 [INFO]: Starting export of profile profile_1 to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1
+2026-02-01 19:01:00,636 [DEBUG]: For entry test_1:
+2026-02-01 19:01:00,636 [DEBUG]: Exporting "entry_points.txt"...
+2026-02-01 19:01:00,637 [INFO]: Successfully exported to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1
+2026-02-01 19:02:14,449 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:02:14,449 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_101022026_190214
+2026-02-01 19:02:14,449 [INFO]: Starting export of profile profile_1 to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_101022026_190214
+2026-02-01 19:02:14,450 [DEBUG]: For entry test_1:
+2026-02-01 19:02:14,450 [DEBUG]: Exporting "entry_points.txt"...
+2026-02-01 19:02:14,450 [INFO]: Creating archive
+2026-02-01 19:02:14,454 [INFO]: Successfully exported to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_101022026_190214.tar
+2026-02-01 19:02:34,040 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:02:34,040 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_101022026_190234
+2026-02-01 19:02:34,040 [INFO]: Starting export of profile profile_1 to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_101022026_190234
+2026-02-01 19:02:34,040 [DEBUG]: For entry test_1:
+2026-02-01 19:02:34,040 [DEBUG]: Exporting "entry_points.txt"...
+2026-02-01 19:02:34,040 [INFO]: Creating archive
+2026-02-01 19:02:34,044 [INFO]: Successfully exported to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar
+2026-02-01 19:12:19,576 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:12:19,576 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:12:19,576 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:12:19,581 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_1 doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_101022026_191219
+2026-02-01 19:12:19,581 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:12:19,581 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:12:19,581 [ERROR]: aux_copy: Given /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_101022026_191219/test_1/entry_points.txt wasn't valid
+2026-02-01 19:12:19,581 [INFO]: Deleting temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_101022026_191219
+2026-02-01 19:12:19,581 [ERROR]: Exception raised when running funcs.py
+Traceback (most recent call last):
+  File "/home/zeus/Projects/Programacion/konlab/venv/lib64/python3.14/site-packages/konlab/funcs.py", line 38, in inner_func
+    function = func(*args, **kwargs)
+  File "/home/zeus/Projects/Programacion/konlab/venv/lib64/python3.14/site-packages/konlab/funcs.py", line 357, in reapply_export
+    shutil.rmtree(temporal_dir)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.14/shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.14/shutil.py", line 721, in _rmtree_safe_fd
+    _rmtree_safe_fd_step(stack, onexc)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.14/shutil.py", line 799, in _rmtree_safe_fd_step
+    onexc(func, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.14/shutil.py", line 760, in _rmtree_safe_fd_step
+    orig_st = os.lstat(name, dir_fd=dirfd)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_101022026_191219'
+2026-02-01 19:18:39,029 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:18:39,029 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:18:39,029 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:18:39,029 [WARNING]: Remember that when unpacking contents if a folder with the same name exists it will be overriden
+2026-02-01 19:18:39,529 [WARNING]: The file will be extracted in /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_1, you have 5 seconds if you wish to cancel this operation
+2026-02-01 19:18:55,762 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:18:55,762 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:18:55,762 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:18:55,762 [WARNING]: Remember that when unpacking contents if a folder with the same name exists it will be overriden
+2026-02-01 19:18:56,262 [WARNING]: The file will be extracted in /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_1, you have 5 seconds if you wish to cancel this operation
+2026-02-01 19:19:01,262 [INFO]: Unpacking...
+2026-02-01 19:19:01,267 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:19:01,267 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:19:01,267 [INFO]: Deleting temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_1
+2026-02-01 19:19:01,267 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:22:25,821 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:22:25,821 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:22:25,821 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:22:25,824 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:22:25,824 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:22:25,825 [INFO]: Deleting temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_1
+2026-02-01 19:22:25,825 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:23:06,789 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:23:06,789 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:23:06,789 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:23:06,793 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:23:06,793 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:23:06,793 [INFO]: Deleting temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_1
+2026-02-01 19:23:06,793 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:23:24,455 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:23:24,455 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:23:24,455 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:23:24,455 [ERROR]: Exception raised when running funcs.py
+Traceback (most recent call last):
+  File "/home/zeus/Projects/Programacion/konlab/venv/lib64/python3.14/site-packages/konlab/funcs.py", line 38, in inner_func
+    function = func(*args, **kwargs)
+  File "/home/zeus/Projects/Programacion/konlab/venv/lib64/python3.14/site-packages/konlab/funcs.py", line 315, in reapply_export
+    print(len(os.listdir(os.path.join(temporal_dir, filename))))
+              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_1'
+2026-02-01 19:24:00,884 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:24:00,884 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:24:00,884 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:24:00,884 [WARNING]: Extracted path /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_1 alreay exists and isn't empty, remember that unpacking will override contents
+2026-02-01 19:24:00,884 [WARNING]: You are given 5 seconds to cancel the operation if unsure
+2026-02-01 19:24:08,892 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:24:08,892 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:24:08,892 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:24:08,892 [WARNING]: Extracted path /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_1 alreay exists and isn't empty, remember that unpacking will override contents
+2026-02-01 19:24:08,892 [WARNING]: You are given 5 seconds to cancel the operation if unsure
+2026-02-01 19:24:15,896 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:24:15,896 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:24:15,896 [INFO]: Deleting temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_1
+2026-02-01 19:24:15,897 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:25:00,603 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:25:00,603 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:25:00,603 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:25:00,603 [ERROR]: Exception raised when running funcs.py
+Traceback (most recent call last):
+  File "/home/zeus/Projects/Programacion/konlab/venv/lib64/python3.14/site-packages/konlab/funcs.py", line 38, in inner_func
+    function = func(*args, **kwargs)
+  File "/home/zeus/Projects/Programacion/konlab/venv/lib64/python3.14/site-packages/konlab/funcs.py", line 315, in reapply_export
+    print(len(os.listdir(os.path.join(temporal_dir, filename))))
+              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_1'
+2026-02-01 19:25:17,097 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:25:17,097 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:25:17,097 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:26:13,129 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:26:13,129 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:26:13,129 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:26:13,129 [WARNING]: Extracted path /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_1 alreay exists and isn't empty, remember that unpacking will override contents
+2026-02-01 19:26:13,129 [WARNING]: You are given 5 seconds to cancel the operation if unsure
+2026-02-01 19:26:32,106 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:26:32,106 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:26:49,886 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:26:49,886 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:26:49,886 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:27:18,319 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:27:18,320 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_101022026_192718
+2026-02-01 19:27:18,320 [INFO]: Starting export of profile profile_1 to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_101022026_192718
+2026-02-01 19:27:18,320 [DEBUG]: For entry test_1:
+2026-02-01 19:27:18,320 [DEBUG]: Exporting "entry_points.txt"...
+2026-02-01 19:27:18,320 [INFO]: Creating archive
+2026-02-01 19:27:18,323 [INFO]: Successfully exported to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar
+2026-02-01 19:27:37,189 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:27:37,189 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:27:37,189 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:28:52,821 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:28:52,821 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_101022026_192852
+2026-02-01 19:28:52,822 [INFO]: Starting export of profile profile_1 to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_101022026_192852
+2026-02-01 19:28:52,822 [DEBUG]: For entry test_1:
+2026-02-01 19:28:52,822 [DEBUG]: Exporting "entry_points.txt"...
+2026-02-01 19:28:52,822 [INFO]: Creating archive
+2026-02-01 19:28:52,825 [INFO]: Successfully exported to /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar
+2026-02-01 19:28:58,460 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:28:58,460 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:28:58,460 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:29:55,766 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:29:55,766 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:29:55,766 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:29:55,766 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_192955
+2026-02-01 19:30:11,156 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:30:11,156 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:30:11,156 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:30:11,156 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_193011
+2026-02-01 19:30:45,762 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:30:45,762 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:30:45,762 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:30:45,762 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_193045
+2026-02-01 19:30:45,764 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:30:45,764 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:30:45,764 [ERROR]: aux_copy: Given /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_193045/profile_1/test_1/entry_points.txt wasn't valid
+2026-02-01 19:30:45,765 [INFO]: Deleting temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_193045/profile_1
+2026-02-01 19:30:45,765 [ERROR]: Exception raised when running funcs.py
+Traceback (most recent call last):
+  File "/home/zeus/Projects/Programacion/konlab/venv/lib64/python3.14/site-packages/konlab/funcs.py", line 38, in inner_func
+    function = func(*args, **kwargs)
+  File "/home/zeus/Projects/Programacion/konlab/venv/lib64/python3.14/site-packages/konlab/funcs.py", line 359, in reapply_export
+    shutil.rmtree(temporal_dir)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.14/shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.14/shutil.py", line 721, in _rmtree_safe_fd
+    _rmtree_safe_fd_step(stack, onexc)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.14/shutil.py", line 799, in _rmtree_safe_fd_step
+    onexc(func, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.14/shutil.py", line 760, in _rmtree_safe_fd_step
+    orig_st = os.lstat(name, dir_fd=dirfd)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_193045/profile_1'
+2026-02-01 19:31:33,106 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:31:33,106 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:31:33,106 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:31:33,108 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:31:33,108 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:31:33,108 [ERROR]: aux_copy: Given /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_1/test_1/entry_points.txt wasn't valid
+2026-02-01 19:31:33,108 [INFO]: Deleting temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_1
+2026-02-01 19:31:33,108 [ERROR]: Exception raised when running funcs.py
+Traceback (most recent call last):
+  File "/home/zeus/Projects/Programacion/konlab/venv/lib64/python3.14/site-packages/konlab/funcs.py", line 38, in inner_func
+    function = func(*args, **kwargs)
+  File "/home/zeus/Projects/Programacion/konlab/venv/lib64/python3.14/site-packages/konlab/funcs.py", line 360, in reapply_export
+    shutil.rmtree(temporal_dir)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.14/shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.14/shutil.py", line 721, in _rmtree_safe_fd
+    _rmtree_safe_fd_step(stack, onexc)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.14/shutil.py", line 799, in _rmtree_safe_fd_step
+    onexc(func, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib64/python3.14/shutil.py", line 760, in _rmtree_safe_fd_step
+    orig_st = os.lstat(name, dir_fd=dirfd)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_1'
+2026-02-01 19:32:55,090 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:32:55,090 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:32:55,090 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 is a directory
+2026-02-01 19:32:55,090 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:32:55,090 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:32:55,091 [INFO]: Deleting temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_1
+2026-02-01 19:32:55,091 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:36:12,342 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:36:12,342 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:36:12,342 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 is a directory
+2026-02-01 19:36:12,342 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:36:12,342 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:36:12,342 [INFO]: Deleting temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying
+2026-02-01 19:36:12,343 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:36:28,047 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:36:28,048 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:36:28,048 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 is a directory
+2026-02-01 19:36:28,048 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:36:28,048 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:36:28,048 [DEBUG]: Did not remove temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying
+2026-02-01 19:36:28,048 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:36:41,058 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:36:41,058 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:36:41,058 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:36:41,058 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_193641
+2026-02-01 19:36:41,060 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:36:41,060 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:36:41,060 [ERROR]: aux_copy: Given /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_193641/profile_1/test_1/entry_points.txt wasn't valid
+2026-02-01 19:36:41,060 [INFO]: Deleting temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying
+2026-02-01 19:36:41,061 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:37:09,398 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:37:09,399 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:37:09,399 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 is a directory
+2026-02-01 19:37:09,399 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:37:09,399 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:37:09,399 [DEBUG]: Did not remove temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying
+2026-02-01 19:37:09,399 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:37:13,348 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:37:13,348 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:37:13,348 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:37:13,348 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_193713
+2026-02-01 19:37:13,351 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:37:13,351 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:37:13,351 [ERROR]: aux_copy: Given /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_193713/profile_1/test_1/entry_points.txt wasn't valid
+2026-02-01 19:37:13,351 [INFO]: Deleting temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_193713
+2026-02-01 19:37:13,351 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:37:42,798 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:37:42,798 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:37:42,798 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:37:42,798 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_193742
+2026-02-01 19:38:13,917 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:38:13,918 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:38:13,918 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:38:13,918 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_193813
+2026-02-01 19:38:13,920 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:38:13,920 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:38:13,920 [ERROR]: aux_copy: Given /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_193813/profile_1/test_1/entry_points.txt wasn't valid
+2026-02-01 19:38:13,920 [INFO]: Deleting temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_193813
+2026-02-01 19:38:13,921 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:38:39,823 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:38:39,823 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:38:39,823 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:38:39,823 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_193839
+2026-02-01 19:38:39,826 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:38:39,826 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:38:39,826 [ERROR]: aux_copy: Given /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_193839/profile_1/test_1/entry_points.txt wasn't valid
+2026-02-01 19:38:39,826 [DEBUG]: Did not remove temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_193839
+2026-02-01 19:38:39,826 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:39:23,283 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:39:23,283 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:39:23,284 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:39:23,286 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:39:23,286 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:39:23,286 [ERROR]: aux_copy: Given /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_1/test_1/entry_points.txt wasn't valid
+2026-02-01 19:39:23,286 [DEBUG]: Did not remove temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying
+2026-02-01 19:39:23,286 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:39:38,704 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:39:38,704 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:39:38,704 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:39:38,707 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:39:38,707 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:39:38,707 [ERROR]: aux_copy: Given /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_1/test_1/entry_points.txt wasn't valid
+2026-02-01 19:39:38,707 [DEBUG]: Did not remove temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying
+2026-02-01 19:39:38,707 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:41:32,743 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:41:32,743 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:41:32,743 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:41:32,743 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194132
+2026-02-01 19:41:32,745 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:41:32,745 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:41:32,745 [ERROR]: aux_copy: Given /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194132/profile_1/test_1/entry_points.txt wasn't valid
+2026-02-01 19:41:32,745 [DEBUG]: Did not remove temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194132
+2026-02-01 19:41:32,745 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:41:51,068 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:41:51,068 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:41:51,068 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:41:51,071 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:41:51,071 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:41:51,071 [ERROR]: aux_copy: Given /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_1/test_1/entry_points.txt wasn't valid
+2026-02-01 19:41:51,071 [DEBUG]: Did not remove temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying
+2026-02-01 19:41:51,071 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:42:49,734 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:42:49,735 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:42:49,735 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:42:49,735 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194249
+2026-02-01 19:42:49,737 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:42:49,737 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:42:49,737 [DEBUG]: Did not remove temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194249
+2026-02-01 19:42:49,737 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:42:58,667 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:42:58,667 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:42:58,667 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:42:58,670 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:42:58,670 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:42:58,670 [DEBUG]: Did not remove temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying
+2026-02-01 19:42:58,670 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:44:00,715 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:44:00,715 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:44:00,715 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:44:00,716 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194400
+2026-02-01 19:44:00,718 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:44:00,718 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:44:00,718 [DEBUG]: Did not remove temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194400/profile_1
+2026-02-01 19:44:00,718 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:44:18,628 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:44:18,628 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:44:18,628 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:44:18,628 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194418
+2026-02-01 19:44:18,631 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:44:18,631 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:44:18,631 [INFO]: Deleting temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194418/profile_1
+2026-02-01 19:44:18,631 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:44:42,792 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:44:42,792 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:44:42,792 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:44:42,794 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:44:42,794 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:44:42,794 [INFO]: Deleting temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying
+2026-02-01 19:44:42,795 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:44:51,366 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:44:51,366 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:44:51,367 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:44:51,369 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:44:51,369 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:44:51,370 [DEBUG]: Did not remove temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying
+2026-02-01 19:44:51,370 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:44:54,602 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:44:54,602 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:44:54,602 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:44:54,602 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194454
+2026-02-01 19:44:54,604 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:44:54,604 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:44:54,605 [INFO]: Deleting temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194454
+2026-02-01 19:44:54,605 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:45:08,220 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:45:08,220 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:45:08,220 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 is a directory
+2026-02-01 19:45:08,220 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_1 doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_101022026_194508
+2026-02-01 19:45:08,220 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:45:08,221 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:45:08,221 [INFO]: Deleting temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying
+2026-02-01 19:45:08,221 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:45:48,689 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:45:48,689 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:45:48,689 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:45:48,691 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:45:48,691 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:45:48,691 [DEBUG]: Did not remove temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying
+2026-02-01 19:45:48,692 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:45:52,384 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:45:52,384 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:45:52,384 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 is a directory
+2026-02-01 19:45:52,384 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_1 doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_101022026_194552
+2026-02-01 19:45:52,385 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:45:52,385 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:45:52,385 [INFO]: Deleting temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_101022026_194552
+2026-02-01 19:45:52,385 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:46:07,414 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:46:07,414 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:46:07,414 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 is a directory
+2026-02-01 19:46:07,414 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_1 doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_101022026_194607
+2026-02-01 19:46:07,415 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:46:07,415 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:46:07,415 [DEBUG]: Did not remove temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying/profile_101022026_194607
+2026-02-01 19:46:07,415 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:47:21,469 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:47:21,469 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:47:21,469 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194721
+2026-02-01 19:47:21,469 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 is a directory
+2026-02-01 19:47:21,469 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:47:21,469 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:47:21,470 [DEBUG]: Did not remove temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194721
+2026-02-01 19:47:21,470 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:48:13,058 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:48:13,058 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:48:13,058 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194813
+2026-02-01 19:48:13,058 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 is a directory
+2026-02-01 19:48:13,059 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:48:13,059 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:48:13,059 [DEBUG]: Did not remove temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194813
+2026-02-01 19:48:13,059 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:49:22,168 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:49:22,168 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:49:22,168 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194922
+2026-02-01 19:49:22,168 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 is a directory
+2026-02-01 19:49:22,168 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:49:22,169 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:49:22,169 [DEBUG]: Did not remove temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194922
+2026-02-01 19:49:22,169 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:49:30,221 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:49:30,221 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:49:30,221 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194930
+2026-02-01 19:49:30,222 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 is a directory
+2026-02-01 19:49:30,222 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:49:30,222 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:49:30,222 [INFO]: Deleting temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194930
+2026-02-01 19:49:30,222 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:49:39,506 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:49:39,506 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:49:39,506 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194939
+2026-02-01 19:49:39,506 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1 is a directory
+2026-02-01 19:49:39,507 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:49:39,507 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:49:39,507 [INFO]: Deleting temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194939
+2026-02-01 19:49:39,507 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:49:52,556 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:49:52,556 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:49:52,556 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194952
+2026-02-01 19:49:52,556 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:49:52,558 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:49:52,558 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:49:52,559 [DEBUG]: Did not remove temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194952
+2026-02-01 19:49:52,559 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
+2026-02-01 19:49:58,058 [DEBUG]: Loaded config: /home/zeus/Projects/Programacion/konlab/test_data/conf.yaml
+2026-02-01 19:49:58,059 [INFO]: Preparing to reapply config for profile_1 from backup
+2026-02-01 19:49:58,059 [WARNING]: /home/zeus/Projects/Programacion/konlab/test_data/test_applying doesn't seem to be empty, instead moving to the new path: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194958
+2026-02-01 19:49:58,059 [DEBUG]: /home/zeus/Projects/Programacion/konlab/test_data/exports/profile_1.tar is a file, extracting it
+2026-02-01 19:49:58,062 [INFO]: Starting to apply profile files to corresponding locations
+2026-02-01 19:49:58,062 [DEBUG]: Applying "entry_points.txt"...
+2026-02-01 19:49:58,062 [INFO]: Deleting temporal directory: /home/zeus/Projects/Programacion/konlab/test_data/test_applying01022026_194958
+2026-02-01 19:49:58,062 [INFO]: Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct
