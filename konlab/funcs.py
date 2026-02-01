@@ -5,13 +5,13 @@ This module contains all the functions for konlab.
 import os, sys, shutil, traceback, logging
 from datetime import datetime
 from zipfile import is_zipfile, ZipFile
-from konlab.consts import (
+from consts import (
     HOME,
     CONFIG_FILE,
     EXPORT_FORMAT,
     LOGS_FILE
 )
-from konlab.parse import TOKEN_SYMBOL, tokens, parse_functions, parse_keywords
+from parse import TOKEN_SYMBOL, tokens, parse_functions, parse_keywords
 
 try:
     import yaml

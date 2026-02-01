@@ -1,6 +1,3 @@
-To run: build with "pip install ." then "python konlab"
-
--Review Makefile
 -Change logging dir
 
 DONES:

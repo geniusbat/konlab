@@ -2,8 +2,8 @@
 
 import argparse, os, shutil
 import logging, logging.config
-from konlab import funcs
-from konlab.consts import (
+import funcs
+from consts import (
     VERSION,
     CONFIG_DIR,
     EXPORT_DIR,
