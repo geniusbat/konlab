@@ -58,20 +58,6 @@ def _get_parser() -> argparse.ArgumentParser:
         action="store_true",
     )
     parser.add_argument(
-        "-a",
-        "--reapply-profile",
-        required=False,
-        type=str,
-        help="Reapplies a specific profile to the necessary locations, it requirest to be given the backup file to use (-d)",
-        metavar="<name>",
-    )
-    parser.add_argument(
-        "--no-clear",
-        required=False,
-        help="If using --reapply-profile, tells it to not delete temporal directory used to reapply files",
-        action="store_true",
-    )
-    parser.add_argument(
         "-z", "--compress", 
         required=False, 
         action="store_true", 
@@ -83,6 +69,26 @@ def _get_parser() -> argparse.ArgumentParser:
         required=False,
         help="Specify the format type when archiving an exported profile, if set to null it will export is a folder",
         metavar="<format-name>"
+    )
+    parser.add_argument(
+        "-a",
+        "--reapply-profile",
+        required=False,
+        type=str,
+        help="Reapplies a specific profile to the necessary locations, it requirest to be given the backup file to use (-d)",
+        metavar="<name>",
+    )
+    parser.add_argument(
+        "--temp",
+        required=False,
+        help="Specify where to  hold profile files for reapplying a profile",
+        metavar="<temp-path>"
+    )
+    parser.add_argument(
+        "--no-clear",
+        required=False,
+        help="If using --reapply-profile, tells it to not delete temporal directory used to reapply files",
+        action="store_true",
     )
     parser.add_argument(
         "-d",
@@ -203,12 +209,13 @@ def main():
         )
     elif args.reapply_profile:
         assert len(use_directory)>0, "ERROR: directory option is empty"
+        assert len(args.temp)>0, "ERROR: temp option is empty"
         funcs.reapply_export(
             config=config,
             dry_run=args.dry_run, 
             profile_name=args.reapply_profile, 
             backup_file_dir=use_directory,
-            temporal_dir="/home/zeus/Projects/Programacion/konlab/test_data/test_applying", #TODO: Dynamic
+            temporal_dir=args.temp,
             delete_at_end=not args.no_clear
         )
     elif args.version:
