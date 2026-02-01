@@ -3,7 +3,7 @@ This module parses conf.yaml
 """
 import os
 import re
-from consts import HOME, CONFIG_DIR, SHARE_DIR, BIN_DIR
+import consts
 
 
 def ends_with(grouped_regex, path) -> str:
@@ -87,10 +87,7 @@ TOKEN_SYMBOL = "$"
 tokens = {
     "keywords": {
         "dict": {
-            "HOME": HOME,
-            "CONFIG_DIR": CONFIG_DIR,
-            "SHARE_DIR": SHARE_DIR,
-            "BIN_DIR": BIN_DIR,
+            #ADD here values to be substituted in config files, ie: "TEST_A":<path_to_substitute>; where in the config file it will be written as <TOKEN_SYMBOL>TEST_A
         }
     },
     "functions": {
