@@ -1,3 +1,4 @@
+-test if i can input a subfolder or a file in a subfolder in the "files" option for an entry in a configuration file.
 -Change logging dir
 -Think if I should have a default config in somewhere default as /etc/konlab or if to force user
 -Think of new values to be parsed in parse.py
