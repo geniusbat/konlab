@@ -10,8 +10,8 @@
 ---
 
 ## Installation 
-<p>As of now the source code is available, everything it needs is selfcontained in the project, therefore all you need is to download, install requirements and run main.py</p>
-<p>Creating a python will be added to the roadmap.</p>
+<p>As of now the source code is available, everything it needs (module-wise) is self-contained in the project, therefore all you need is to download, install requirements and run main.py</p>
+<p>Creating a python package will be added to the roadmap once the project reaches a certain maturity.</p>
 <i>
   <p>
     Do note that the default config located at "config/default.yaml", isn't valid to start backing up your things.
@@ -61,6 +61,7 @@ Set how verbose the script should run, depends on how many v are added (0:info o
 
 ### Export all available profiles in configuration
 `-export-all`
+Export all available profiles for configuration being used.
 #### Some optional parameters:
 - `-d <export_path>` or `--directory <export_path>` <br>
 Specify the location where the data will be exported. By default it goes to ./exports/ . <br>
@@ -98,10 +99,9 @@ Set how verbose the script should run, depends on how many v are added (0:info o
 - Add common placeholders
 - Better file reapplying (I feel that if it fails there is no way back)
 - Profile performance of modules
--
+- Python package
 
-TODO:
-
+---
 TODO: Update with new guide
 
 ## Editing the configuration file
