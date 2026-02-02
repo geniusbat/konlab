@@ -13,9 +13,11 @@
 <p>As of now the source code is available, everything it needs is selfcontained in the project, therefore all you need is to download, install requirements and run main.py</p>
 <p>Creating a python will be added to the roadmap.</p>
 <i>
-    <p>Do note that the default config located at "config/default.yaml", isn't valid to start backing up your things</p>
-    <p>This is because every server and every user's needs are different and it would be very hard to come upon a generalized configuration</p>
-    <p>Therefore use the mentioned config file as an example to create your own!</p>
+  <p>
+    Do note that the default config located at "config/default.yaml", isn't valid to start backing up your things
+    This is because every server and every user's needs are different and it would be very hard to come upon a generalized configuration
+    Therefore use the mentioned config file as an example to create your own!
+  </p>
 </i>
 
 ## Usage  --TODO
@@ -51,6 +53,8 @@ or
 ---
 
 ## Roadmap
+
+TODO:
 
 ## Old from previous README: TODO: Update with new guide
 
