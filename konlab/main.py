@@ -1,6 +1,6 @@
 """Konlab entry point."""
 
-import argparse, os, shutil
+import argparse, os
 import logging, logging.config
 import funcs
 from consts import (
@@ -73,15 +73,16 @@ def _get_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "-z", "--compress", 
-        required=False, 
-        action="store_true", 
+        required=False,
+        action="store_true",
         help="Add if desiring to compress output when exporting a profile"
     )
     parser.add_argument(
         "-f",
         "--format",
         required=False,
-        help="Specify the format type when archiving an exported profile, if set to null it will export is a folder",
+        help="""Specify the format type when archiving an exported profile,
+            if set to null it will export is a folder""",
         metavar="<format-name>"
     )
     parser.add_argument(
@@ -89,23 +90,27 @@ def _get_parser() -> argparse.ArgumentParser:
         "--reapply-profile",
         required=False,
         type=str,
-        help="Reapplies a specific profile to the necessary locations, it requirest to be given the backup file to use (-d)",
+        help="""Reapplies a specific profile to the necessary locations,
+            it requirest to be given the backup file to use (-d)""",
         metavar="<name>",
     )
     parser.add_argument(
         "--temp-dir",
         required=False,
-        help="Specify where to  hold profile files for reapplying a profile, folder doesn't need to exist as script will create it, if not specified it /tmp will be used",
+        help="""Specify where to  hold profile files for reapplying a profile,
+            folder doesn't need to exist as script will create it,
+            if not specified it /tmp will be used""",
         metavar="<temp-path>",
         default=""
     )
     parser.add_argument(
         "--no-clear",
         required=False,
-        help="If using --reapply-profile, tells it to not delete temporal directory used to reapply files",
+        help="""If using --reapply-profile, tells it to not delete
+            temporal directory used to reapply files""",
         action="store_true",
     )
-    parser.add_argument( #TODO: Make force the default
+    parser.add_argument(
         "--dry-run",
         required=False,
         action="store_true",
@@ -114,8 +119,10 @@ def _get_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--verbose", 
         "-v",
-        required=False, 
-        help="Set how verbose the script should run, depends on how many v are added (0:info only to console, 1: debug only to console, 2: debug to console and info to file, 3: write everything to file and console)", 
+        required=False,
+        help="""Set how verbose the script should run,
+            depends on how many v are added (0:info only to console, 1: debug only to console,
+            2: debug to console and info to file, 3: write everything to file and console)""",
         action='count',
         default=0,
     )
@@ -136,7 +143,7 @@ def _configure_logger(log_level_num:int=0) -> None:
         2: logging.INFO,
         3: logging.DEBUG
     }
-    LOG_CONFIG_WITH_FILE = {
+    log_config_with_file = {
         "version": 1,
         "formatters": {
             "standard": { 
@@ -167,7 +174,7 @@ def _configure_logger(log_level_num:int=0) -> None:
             },
         }
     }
-    LOG_CONFIG_ONLY_CONSOLE = {
+    log_config_only_console = {
         "version": 1,
         "formatters": {
             "standard": { 
@@ -190,13 +197,15 @@ def _configure_logger(log_level_num:int=0) -> None:
         }
     }
     if log_level_num<2:
-        logging.config.dictConfig(LOG_CONFIG_ONLY_CONSOLE)
+        logging.config.dictConfig(log_config_only_console)
     else:
-        logging.config.dictConfig(LOG_CONFIG_WITH_FILE)
+        logging.config.dictConfig(log_config_with_file)
     logger = logging.getLogger()
 
     #Set log_level for console handler
-    logger.handlers[0].setLevel(console_level_dict[min(log_level_num,len(console_level_dict.keys())-1)])
+    logger.handlers[0].setLevel(
+        console_level_dict[min(log_level_num,len(console_level_dict.keys())-1)]
+    )
     #Set log_level for file handler
     if log_level_num>=2:
         logger.handlers[1].setLevel(file_level_dict[min(log_level_num,3)])
@@ -217,7 +226,8 @@ def main():
         assert os.path.exists(args.config), f"Config doesn't seem to exist at {args.config}"
         use_config = args.config
     config = funcs.read_konlab_config(use_config)
-    assert not config is None, f"Configuration doesn't seem to be valid or is empty, check {CONFIG_FILE}"
+    assert not config is None, f"""Configuration doesn't seem
+                                to be valid or is empty, check {CONFIG_FILE}"""
 
     logger.debug(f"Loaded config: {use_config}")
 
@@ -225,7 +235,8 @@ def main():
     use_directory = EXPORT_DIR
     if args.directory:
         use_directory = args.directory
-        assert os.path.exists(use_directory), "directory {use_directory} doesn't exist or isn't valid"
+        assert os.path.exists(use_directory), """directory {use_directory}
+                                                doesn't exist or isn't valid"""
 
     #Extract format argument
     archive_format = ""
@@ -241,17 +252,17 @@ def main():
         profile_names = config.keys()
         for name in profile_names:
             funcs.export(config=config,
-                dry_run=args.dry_run, 
-                profile_name=name, 
-                export_directory=use_directory, 
+                dry_run=args.dry_run,
+                profile_name=name,
+                export_directory=use_directory,
                 export_name=name,
                 config_path=use_config,
-                compress=args.compress, 
+                compress=args.compress,
                 archive_format= archive_format,
             )
     elif args.export_profile:
         funcs.export(config=config,
-            dry_run=args.dry_run, 
+            dry_run=args.dry_run,
             profile_name=args.export_profile,
             export_directory=use_directory,
             export_name=args.export_name,
@@ -263,8 +274,8 @@ def main():
         assert len(use_directory)>0, "ERROR: directory option is empty"
         funcs.reapply_export(
             config=config,
-            dry_run=args.dry_run, 
-            profile_name=args.reapply_profile, 
+            dry_run=args.dry_run,
+            profile_name=args.reapply_profile,
             backup_file_dir=use_directory,
             temporal_dir=args.temp_dir,
             delete_at_end=not args.no_clear

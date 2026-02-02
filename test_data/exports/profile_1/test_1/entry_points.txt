@@ -1,2 +1,0 @@
-[console_scripts]
-konlab = konlab.__main__:main
