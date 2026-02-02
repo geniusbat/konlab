@@ -112,12 +112,31 @@ def _get_parser() -> argparse.ArgumentParser:
         help="Just test, do not actually do anything",
     )
     parser.add_argument(
-        "-v", "--version", required=False, action="store_true", help="Show version"
+        "--verbose", 
+        "-v",
+        required=False, 
+        help="Set how verbose the script should run, depends on how many v are added (0:info only to console, 1: debug only to console, 2: debug to console and info to file, 3: write everything to file and console)", 
+        action='count',
+        default=0,
+    )
+    parser.add_argument(
+        "--version", required=False, action="store_true", help="Show version"
     )
     return parser
 
 
-LOG_CONFIG = {
+def _configure_logger(log_level_num:int=0) -> None:
+    console_level_dict = {
+        0: logging.INFO,
+        1: logging.DEBUG,
+        2: logging.DEBUG,
+        3: logging.DEBUG
+    }
+    file_level_dict = {
+        2: logging.INFO,
+        3: logging.DEBUG
+    }
+    LOG_CONFIG_WITH_FILE = {
         "version": 1,
         "formatters": {
             "standard": { 
@@ -126,13 +145,13 @@ LOG_CONFIG = {
         },
         "handlers": {
             "console": {
-                "level": "DEBUG",
+                "level": "WARNING",
                 "formatter": "standard",
                 "class": "logging.StreamHandler",
                 "stream": "ext://sys.stdout"
             },
             "file": {
-                "level": "DEBUG",
+                "level": "WARNING",
                 "formatter": "standard",
                 "class": "logging.handlers.RotatingFileHandler",
                 "filename": f"{LOGS_FILE}",
@@ -148,9 +167,39 @@ LOG_CONFIG = {
             },
         }
     }
+    LOG_CONFIG_ONLY_CONSOLE = {
+        "version": 1,
+        "formatters": {
+            "standard": { 
+                "format": "%(asctime)s [%(levelname)s]: %(message)s"
+            },
+        },
+        "handlers": {
+            "console": {
+                "level": "WARNING",
+                "formatter": "standard",
+                "class": "logging.StreamHandler",
+                "stream": "ext://sys.stdout"
+            }
+        },
+        "loggers": {
+            "": {  # root logger, all other loggers will be of this logger level implicitlly.
+                "level":"DEBUG",
+                "handlers": ["console"], 
+            },
+        }
+    }
+    if log_level_num<2:
+        logging.config.dictConfig(LOG_CONFIG_ONLY_CONSOLE)
+    else:
+        logging.config.dictConfig(LOG_CONFIG_WITH_FILE)
+    logger = logging.getLogger()
 
-def _configure_logger() -> None:
-    logging.config.dictConfig(LOG_CONFIG)
+    #Set log_level for console handler
+    logger.handlers[0].setLevel(console_level_dict[min(log_level_num,len(console_level_dict.keys())-1)])
+    #Set log_level for file handler
+    if log_level_num>=2:
+        logger.handlers[1].setLevel(file_level_dict[min(log_level_num,3)])
 
 def main():
     """The main function that handles all the arguments and options."""
@@ -158,9 +207,10 @@ def main():
     parser = _get_parser()
     args = parser.parse_args()
 
-    _configure_logger()
+    #Get verbose amount
+    log_level_num = args.verbose
+    _configure_logger(log_level_num)
     logger = logging.getLogger()
-
     #Get config to use, default to CONFIG_DIR
     use_config = CONFIG_DIR
     if args.config:

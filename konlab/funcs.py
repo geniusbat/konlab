@@ -375,6 +375,3 @@ def reapply_export(config:dict, dry_run:bool, backup_file_dir:str, profile_name:
         logger.info(f"Dry-run completed, check previous errors")
     else:
         logger.info(f"Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct")
-
-    
-
