@@ -6,8 +6,6 @@ import os, sys, shutil, traceback, logging
 from datetime import datetime
 from zipfile import is_zipfile, ZipFile
 from consts import (
-    HOME,
-    CONFIG_FILE,
     EXPORT_FORMAT,
     LOGS_FILE
 )

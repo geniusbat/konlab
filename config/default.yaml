@@ -1,0 +1,18 @@
+---
+# This is the configuration file for konlab.
+# Please make sure it follows the correct format for proper working of konlab.
+# The format should be:
+# ---
+
+#TODO: Add format
+# ...
+# You can use these variables and functions in the locations of different entries:
+# ${ENDS_WITH="text"}: for folders with different names on different computers but their names end with the same thing.
+# The best example for this is the ".default-release" folder for firefox.
+# ${BEGINS_WITH="text"}: for folders with different names on different computers but their names start with the same thing.
+
+profile_1:
+    test_1:
+        location: "/home/phobos/Projects/konlab/test_data/import_data"
+        files:
+            - "foo_folder"

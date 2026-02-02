@@ -5,7 +5,7 @@ import logging, logging.config
 import funcs
 from consts import (
     VERSION,
-    CONFIG_DIR,
+    CONFIG_FILE,
     EXPORT_DIR,
     LOGS_FILE,
 )
@@ -25,7 +25,7 @@ def _get_parser() -> argparse.ArgumentParser:
         "--config",
         required=False,
         type=str,
-        help=f"Use a specific config file instead of the default at {CONFIG_DIR}",
+        help=f"Use a specific config file instead of the default at {CONFIG_FILE}",
         metavar="<config-path>",
     )
     parser.add_argument(
@@ -55,13 +55,13 @@ def _get_parser() -> argparse.ArgumentParser:
         "--export-profile",
         required=False,
         type=str,
-        help="Export a specific profile",
+        help=f"Export a specific profile, by default exports to {EXPORT_DIR}",
         metavar="<name>",
     )
     parser.add_argument(
         "--export-all",
         required=False,
-        help="Export all profiles",
+        help=f"Export all profiles, by default exports to {EXPORT_DIR}",
         action="store_true",
     )
     parser.add_argument(
@@ -211,13 +211,13 @@ def main():
     log_level_num = args.verbose
     _configure_logger(log_level_num)
     logger = logging.getLogger()
-    #Get config to use, default to CONFIG_DIR
-    use_config = CONFIG_DIR
+    #Get config to use, default to CONFIG_FILE
+    use_config = CONFIG_FILE
     if args.config:
         assert os.path.exists(args.config), f"Config doesn't seem to exist at {args.config}"
         use_config = args.config
     config = funcs.read_konlab_config(use_config)
-    assert not config is None, f"Configuration doesn't seem to be valid or is empty, check {CONFIG_DIR}"
+    assert not config is None, f"Configuration doesn't seem to be valid or is empty, check {CONFIG_FILE}"
 
     logger.debug(f"Loaded config: {use_config}")
 

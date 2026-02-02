@@ -1,5 +1,3 @@
--Change logging dir
--Think if I should have a default config in somewhere default as /etc/konlab or if to force user
 -Think of new values to be parsed in parse.py
 -Add option to ensure removal of specific files
 
@@ -9,3 +7,4 @@ DONES:
 -main export_profile
 -main reapply_profile
 -test if i can input a subfolder or a file in a subfolder in the "files" option for an entry in a configuration file. --> As of 02/02/2026 Seems to work partially. If for example I have a location "test_location/" that contains folder "foo_folder", which in turn contains "foo" and "bar", I can set an entry as "foo_folder" and it will copy the whole folder, however, I cant copy individual items in the subfolder. Meaning that a given location can only SELECTIVELY copy all elements in it (and folders recursively).
+-Should I package --> Not for the moment, keep all minimum code and config inside project and let users specify more config if they desire 
