@@ -148,9 +148,6 @@ def get_profile(config:dict, profile_name:str) -> None:
 def export(config:dict, dry_run:bool, profile_name:str, export_directory:str, export_name:str=None,config_path:str="", compress:bool=False, archive_format:str="") -> None:
     """It will export the specified profile as a ".knsv" to the specified directory.
        If there is no specified directory, the directory is set to the current working directory.
-
-    Args:
-        TODO: Add args
     """
 
 

@@ -30,26 +30,26 @@
 `--version`
 
 ### Specify config file
-'-c' or `--config`
+`-c' or `--config`
 
 ### List available profiles
-'-l' or `--list`
+`-l' or `--list`
 
 ### Print profile data
-'-p &ltprofile_name&gt' or `--print &ltprofile_name&gt`
-Where &ltprofile_name&gt is the profile_name available inside the configuration being used.
+`-p &lt;profile_name&gt;' or `--print &lt;profile_name&gt;`
+Where &lt;profile_name&gt; is the profile_name available inside the configuration being used.
 
 ### Export profile
-'-e &ltprofile_name&gt' or `--export-profile &ltprofile_name&gt`
-Export the profile &ltprofile_name&gt available inside the configuration being used.
+`-e &lt;profile_name&gt;' or `--export-profile &lt;profile_name&gt;`
+Export the profile &lt;profile_name&gt; available inside the configuration being used.
 Some optional parameters:
-- '-d &ltexport_path&gt' or `--directory &ltexport_path&gt`
+- `-d &lt;export_path&gt;' or `--directory &lt;export_path&gt;`
 Specify the location where the data will be exported. By default it goes to ./exports/ .
-- '-n &ltexport_name&gt' or `--export-name &ltexport_name&gt`
+- `-n &lt;export_name&gt;' or `--export-name &lt;export_name&gt;`
 Specify the name of the folder/archive in which the data will be exported. By default uses the profile name.
-- '-z' or `--compress`
+- `-z' or `--compress`
 If using a valid format (meaning that it can be compressed, ie: zips and tars) creates a compressed archive. By default compression is not enabled
-- '-f &ltformat&gt' or `--format &ltformat&gt`
+- `-f &lt;format&gt;' or `--format &lt;format&gt;`
 Specify the name of the folder/archive in which the data will be exported. By default uses tar.
 - `--dry-run`
 Run as test, meaning that no actual files will be copied, useful to preventively detect errors.
@@ -58,13 +58,13 @@ Set how verbose the script should run, depends on how many v are added (0:info o
 
 ### Export all available profiles in configuration
 Some optional parameters:
-- '-d &ltexport_path&gt' or `--directory &ltexport_path&gt`
+- `-d &lt;export_path&gt;' or `--directory &lt;export_path&gt;`
 Specify the location where the data will be exported. By default it goes to ./exports/ .
-- '-n &ltexport_name&gt' or `--export-name &ltexport_name&gt`
+- `-n &lt;export_name&gt;' or `--export-name &lt;export_name&gt;`
 Specify the name of the folder/archive in which the data will be exported. By default uses the profile name.
-- '-z' or `--compress`
+- `-z` or `--compress`
 If using a valid format (meaning that it can be compressed, ie: zips and tars) creates a compressed archive. By default compression is not enabled
-- '-f &ltformat&gt' or `--format &ltformat&gt`
+- `-f &lt;format&gt;' or `--format &lt;format&gt;`
 Specify the name of the folder/archive in which the data will be exported. By default uses tar.
 - `--dry-run`
 Run as test, meaning that no actual files will be copied, useful to preventively detect errors.
@@ -72,14 +72,14 @@ Run as test, meaning that no actual files will be copied, useful to preventively
 Set how verbose the script should run, depends on how many v are added (0:info only to console, 1: debug only to console, 2: debug to console and info to file, 3: write everything to file and console)
 
 ### Reapply profile 
-'-a &ltprofile_name&gt' or `--reapply-profile &ltprofile_name&gt`
+`-a &lt;profile_name&gt;' or `--reapply-profile &lt;profile_name&gt;`
 Reapply profile (meaning to automatically get files of the profile, given a configuration and backup directory, to the appropiate locations).
 Some optional parameters:
-- '-d &ltbackup_path&gt' or `--directory &ltbackup_path&gt`
+- `-d &lt;backup_path&gt;' or `--directory &lt;backup_path&gt;`
 Specify the location where backup data is located.
-- '-d &lttemporal_directory&gt' or `--directory &lttemporal_directory&gt`
+- `-d &lt;temporal_directory&gt;' or `--directory &lt;temporal_directory&gt;`
 Specify where to  hold profile files for reapplying a profile, folder doesn't need to exist as script will create it. By default /tmp is used.
-- '--no-clear'
+- `--no-clear'
 Do not remove temporal directory after reapplying profile.
 - `--dry-run`
 Run as test, meaning that no actual files will be copied, useful to preventively detect errors.
@@ -90,9 +90,16 @@ Set how verbose the script should run, depends on how many v are added (0:info o
 
 ## Roadmap
 
+<i>Review "TODO.md" for a more up to date and shor-term oriented goals.</i>
+
+- Add common placeholders
+- Better file reapplying (I feel that if it fails there is no way back)
+- Profile performance of modules
+-
+
 TODO:
 
-## Old from previous README: TODO: Update with new guide
+TODO: Update with new guide
 
 ## Editing the configuration file
 You can make changes to Konlab's configuration file according to your needs. The configuration file is located in `~/.config/konlab/conf.yaml`.
