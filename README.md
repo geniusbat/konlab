@@ -14,41 +14,77 @@
 <p>Creating a python will be added to the roadmap.</p>
 <i>
   <p>
-    Do note that the default config located at "config/default.yaml", isn't valid to start backing up your things
-    This is because every server and every user's needs are different and it would be very hard to come upon a generalized configuration
+    Do note that the default config located at "config/default.yaml", isn't valid to start backing up your things.
+    This is because every server and every user's needs are different and it would be very hard to come upon a generalized configuration. <br>
     Therefore use the mentioned config file as an example to create your own!
   </p>
 </i>
 
+## Differences to Konsave - TODO:
+
 ## Usage  --TODO
-### Get Help
-`konlab -h` or `konlab --help`
-### Save current configuration as a profile
-`konlab -s <profile name>` or `konlab --save <profile name>`
-### Overwrite an already saved profile
-`konlab -s <profile name> -f` or `konlab -s <profile name> --force `
-### List all profiles
-`konlab -l` or `konlab --list`
-### Remove a profile
-`konlab -r <profile name>` or `konlab --remove <profile name>`
-### Apply a profile
-`konlab -a <profile name>` or `konlab --apply <profile name>`
-You may need to log out and log in to see all the changes.  
-### Export a profile as a ".knsv" file to share it with your friends!
-`konlab -e <profile name>` or `konlab --export-profile <profile name>`
-### Export a profile, setting the output dir and archive name
-`konlab -e <profile name> -d <archive directory> -n <archive name>`
-or
-`konlab --export-profile <profile name> --archive-directory <archive directory> --export-name <export name>`
-### Export a profile, overwrite files if they already exist
-`konlab -e <profile name> -f` or `konlab --export-profile <profile name> --force`
-*note: without --force, the export will be appended with the date and time to ensure unique naming and no data is overwritten
-### Import a ".knsv" file
-`konlab -i <path to the file>` or `konlab --import-profile <path to the file>`
-### Show current version
-`konlab -v` or `konlab --version`  
-### Wipe all profiles
-`konlab -w` or `konlab --wipe`
+### Get help
+`-h` or `--help`
+
+### Get version
+`--version`
+
+### Specify config file
+'-c' or `--config`
+
+### List available profiles
+'-l' or `--list`
+
+### Print profile data
+'-p &ltprofile_name&gt' or `--print &ltprofile_name&gt`
+Where &ltprofile_name&gt is the profile_name available inside the configuration being used.
+
+### Export profile
+'-e &ltprofile_name&gt' or `--export-profile &ltprofile_name&gt`
+Export the profile &ltprofile_name&gt available inside the configuration being used.
+Some optional parameters:
+- '-d &ltexport_path&gt' or `--directory &ltexport_path&gt`
+Specify the location where the data will be exported. By default it goes to ./exports/ .
+- '-n &ltexport_name&gt' or `--export-name &ltexport_name&gt`
+Specify the name of the folder/archive in which the data will be exported. By default uses the profile name.
+- '-z' or `--compress`
+If using a valid format (meaning that it can be compressed, ie: zips and tars) creates a compressed archive. By default compression is not enabled
+- '-f &ltformat&gt' or `--format &ltformat&gt`
+Specify the name of the folder/archive in which the data will be exported. By default uses tar.
+- `--dry-run`
+Run as test, meaning that no actual files will be copied, useful to preventively detect errors.
+- `-v` or `--verbose`
+Set how verbose the script should run, depends on how many v are added (0:info only to console, 1: debug only to console, 2: debug to console and info to file, 3: write everything to file and console)
+
+### Export all available profiles in configuration
+Some optional parameters:
+- '-d &ltexport_path&gt' or `--directory &ltexport_path&gt`
+Specify the location where the data will be exported. By default it goes to ./exports/ .
+- '-n &ltexport_name&gt' or `--export-name &ltexport_name&gt`
+Specify the name of the folder/archive in which the data will be exported. By default uses the profile name.
+- '-z' or `--compress`
+If using a valid format (meaning that it can be compressed, ie: zips and tars) creates a compressed archive. By default compression is not enabled
+- '-f &ltformat&gt' or `--format &ltformat&gt`
+Specify the name of the folder/archive in which the data will be exported. By default uses tar.
+- `--dry-run`
+Run as test, meaning that no actual files will be copied, useful to preventively detect errors.
+- `-v` or `--verbose`
+Set how verbose the script should run, depends on how many v are added (0:info only to console, 1: debug only to console, 2: debug to console and info to file, 3: write everything to file and console)
+
+### Reapply profile 
+'-a &ltprofile_name&gt' or `--reapply-profile &ltprofile_name&gt`
+Reapply profile (meaning to automatically get files of the profile, given a configuration and backup directory, to the appropiate locations).
+Some optional parameters:
+- '-d &ltbackup_path&gt' or `--directory &ltbackup_path&gt`
+Specify the location where backup data is located.
+- '-d &lttemporal_directory&gt' or `--directory &lttemporal_directory&gt`
+Specify where to  hold profile files for reapplying a profile, folder doesn't need to exist as script will create it. By default /tmp is used.
+- '--no-clear'
+Do not remove temporal directory after reapplying profile.
+- `--dry-run`
+Run as test, meaning that no actual files will be copied, useful to preventively detect errors.
+- `-v` or `--verbose`
+Set how verbose the script should run, depends on how many v are added (0:info only to console, 1: debug only to console, 2: debug to console and info to file, 3: write everything to file and console)
 
 ---
 

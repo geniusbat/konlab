@@ -48,7 +48,7 @@ def _get_parser() -> argparse.ArgumentParser:
         "--directory",
         required=False,
         help="Specify where to export a profile or get backup data to reapply one",
-        metavar="<export-path>"
+        metavar="<path>"
     )
     parser.add_argument(
         "-e",
