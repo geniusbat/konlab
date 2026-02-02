@@ -24,68 +24,83 @@
 
 ## Usage  --TODO
 ### Get help
-`-h` or `--help`
+<p>`-h` or `--help`</p>
 
 ### Get version
-`--version`
+<p>`--version`</p>
 
 ### Specify config file
-`-c` or `--config`
+<p>
+    `-c <config_file>` or `--config <config_file>` <br>
+    Specify what config to use for working with profiles.
+</p>
 
 ### List available profiles
-`-l` or `--list`
+<p>`-l` or `--list`</p>
 
 ### Print profile data
-`-p <profile_name>` or `--print <profile_name>`
-Where &lt;profile_name&gt; is the profile_name available inside the configuration being used.
+<p>
+    `-p <profile_name>` or `--print <profile_name>` <br>
+    Where <profile_name> is the profile_name available inside the configuration being used.
+</p>
 
 ### Export profile
-`-e &lt;profile_name&gt;` or `--export-profile &lt;profile_name&gt;`
-Export the profile &lt;profile_name&gt; available inside the configuration being used.
-Some optional parameters:
-- `-d &lt;export_path&gt;` or `--directory &lt;export_path&gt;`
-Specify the location where the data will be exported. By default it goes to ./exports/ .
-- `-n &lt;export_name&gt;` or `--export-name &lt;export_name&gt;`
-Specify the name of the folder/archive in which the data will be exported. By default uses the profile name.
-- `-z` or `--compress`
-If using a valid format (meaning that it can be compressed, ie: zips and tars) creates a compressed archive. By default compression is not enabled
-- `-f &lt;format&gt;` or `--format &lt;format&gt;`
-Specify the name of the folder/archive in which the data will be exported. By default uses tar.
-- `--dry-run`
-Run as test, meaning that no actual files will be copied, useful to preventively detect errors.
-- `-v` or `--verbose`
-Set how verbose the script should run, depends on how many v are added (0:info only to console, 1: debug only to console, 2: debug to console and info to file, 3: write everything to file and console)
+<p>
+    `-e <profile_name>` or `--export-profile <profile_name>` <br>
+    Export the profile <profile_name> available inside the configuration being used.
+</p>
+#### Some optional parameters:
+<p>
+    - `-d <export_path>` or `--directory <export_path>` <br>
+    Specify the location where the data will be exported. By default it goes to ./exports/ . <br>
+    - `-n <export_name>` or `--export-name <export_name>` <br>
+    Specify the name of the folder/archive in which the data will be exported. By default uses the profile name. <br>
+    - `-z` or `--compress` <br>
+    If using a valid format (meaning that it can be compressed, ie: zips and tars) creates a compressed archive. By default compression is not enabled <br>
+    - `-f <format>` or `--format <format>` <br>
+    Specify the name of the folder/archive in which the data will be exported. By default uses tar. <br>
+    - `--dry-run` <br>
+    Run as test, meaning that no actual files will be copied, useful to preventively detect errors. <br>
+    - `-v` or `--verbose` <br>
+    Set how verbose the script should run, depends on how many v are added (0:info only to console, 1: debug only to console, 2: debug to console and info to file, 3: write everything to file and console)
+</p>
 
 ### Export all available profiles in configuration
-Some optional parameters:
-- `-d &lt;export_path&gt;` or `--directory &lt;export_path&gt;`
-Specify the location where the data will be exported. By default it goes to ./exports/ .
-- `-n &lt;export_name&gt;` or `--export-name &lt;export_name&gt;`
-Specify the name of the folder/archive in which the data will be exported. By default uses the profile name.
-- `-z` or `--compress`
-If using a valid format (meaning that it can be compressed, ie: zips and tars) creates a compressed archive. By default compression is not enabled
-- `-f &lt;format&gt;` or `--format &lt;format&gt;`
-Specify the name of the folder/archive in which the data will be exported. By default uses tar.
-- `--dry-run`
-Run as test, meaning that no actual files will be copied, useful to preventively detect errors.
-- `-v` or `--verbose`
+<p>`-export-all`</p>
+#### Some optional parameters:
+<p>
+- `-d <export_path>` or `--directory <export_path>` <br>
+Specify the location where the data will be exported. By default it goes to ./exports/ . <br>
+- `-n <export_name>` or `--export-name <export_name>` <br>
+Specify the name of the folder/archive in which the data will be exported. By default uses the profile name. <br>
+- `-z` or `--compress` <br>
+If using a valid format (meaning that it can be compressed, ie: zips and tars) creates a compressed archive. By default compression is not enabled <br>
+- `-f <format>` or `--format <format>` <br>
+Specify the name of the folder/archive in which the data will be exported. By default uses tar. <br>
+- `--dry-run` <br>
+Run as test, meaning that no actual files will be copied, useful to preventively detect errors. <br>
+- `-v` or `--verbose` <br>
 Set how verbose the script should run, depends on how many v are added (0:info only to console, 1: debug only to console, 2: debug to console and info to file, 3: write everything to file and console)
+</p>
 
 ### Reapply profile 
-`-a &lt;profile_name&gt;` or `--reapply-profile &lt;profile_name&gt;`
-Reapply profile (meaning to automatically get files of the profile, given a configuration and backup directory, to the appropiate locations).
-Some optional parameters:
-- `-d &lt;backup_path&gt;` or `--directory &lt;backup_path&gt;`
-Specify the location where backup data is located.
-- `-d &lt;temporal_directory&gt;` or `--directory &lt;temporal_directory&gt;`
-Specify where to  hold profile files for reapplying a profile, folder doesn't need to exist as script will create it. By default /tmp is used.
-- `--no-clear`
-Do not remove temporal directory after reapplying profile.
-- `--dry-run`
-Run as test, meaning that no actual files will be copied, useful to preventively detect errors.
-- `-v` or `--verbose`
-Set how verbose the script should run, depends on how many v are added (0:info only to console, 1: debug only to console, 2: debug to console and info to file, 3: write everything to file and console)
-
+<p>
+    `-a <profile_name>` or `--reapply-profile <profile_name>` <br>
+        Reapply profile (meaning to automatically get files of the profile, given a configuration and backup directory, to the appropiate locations).
+</p>
+#### Some optional parameters:
+<p>
+    - `-d <backup_path>` or `--directory <backup_path>` <br>
+    Specify the location where backup data is located. <br>
+    - `-d <temporal_directory>` or `--directory <temporal_directory>` <br>
+    Specify where to  hold profile files for reapplying a profile, folder doesn't need to exist as script will create it. By default /tmp is used. <br>
+    - `--no-clear` <br>
+    Do not remove temporal directory after reapplying profile. <br>
+    - `--dry-run` <br>
+    Run as test, meaning that no actual files will be copied, useful to preventively detect errors. <br>
+    - `-v` or `--verbose` <br>
+    Set how verbose the script should run, depends on how many v are added (0:info only to console, 1: debug only to console, 2: debug to console and info to file, 3: write everything to file and console)
+</p>
 ---
 
 ## Roadmap
