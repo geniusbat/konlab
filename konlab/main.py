@@ -44,6 +44,13 @@ def _get_parser() -> argparse.ArgumentParser:
         metavar="<profile_name>",
     )
     parser.add_argument(
+        "-d",
+        "--directory",
+        required=False,
+        help="Specify where to export a profile or get backup data to reapply one",
+        metavar="<export-path>"
+    )
+    parser.add_argument(
         "-e",
         "--export-profile",
         required=False,
@@ -56,6 +63,13 @@ def _get_parser() -> argparse.ArgumentParser:
         required=False,
         help="Export all profiles",
         action="store_true",
+    )
+    parser.add_argument(
+        "-n",
+        "--export-name",
+        required=False,
+        help="Specify the export name for the root folder when exporting a profile",
+        metavar="<archive-name>"
     )
     parser.add_argument(
         "-z", "--compress", 
@@ -79,10 +93,11 @@ def _get_parser() -> argparse.ArgumentParser:
         metavar="<name>",
     )
     parser.add_argument(
-        "--temp",
+        "--temp-dir",
         required=False,
-        help="Specify where to  hold profile files for reapplying a profile",
-        metavar="<temp-path>"
+        help="Specify where to  hold profile files for reapplying a profile, folder doesn't need to exist as script will create it, if not specified it /tmp will be used",
+        metavar="<temp-path>",
+        default=""
     )
     parser.add_argument(
         "--no-clear",
@@ -90,25 +105,11 @@ def _get_parser() -> argparse.ArgumentParser:
         help="If using --reapply-profile, tells it to not delete temporal directory used to reapply files",
         action="store_true",
     )
-    parser.add_argument(
-        "-d",
-        "--directory",
-        required=False,
-        help="Specify where to export or get backup data to reapply profile",
-        metavar="<export-path>"
-    )
-    parser.add_argument(
-        "-n",
-        "--export-name",
-        required=False,
-        help="Specify the export name when exporting a profile",
-        metavar="<archive-name>"
-    )
     parser.add_argument( #TODO: Make force the default
         "--dry-run",
         required=False,
         action="store_true",
-        help="Just test, do not actually backup anything",
+        help="Just test, do not actually do anything",
     )
     parser.add_argument(
         "-v", "--version", required=False, action="store_true", help="Show version"
@@ -165,8 +166,7 @@ def main():
     if args.config:
         assert os.path.exists(args.config), f"Config doesn't seem to exist at {args.config}"
         use_config = args.config
-    
-    config = funcs.read_konlab_config(use_config) #TODO: Dynamic config with option -c --config
+    config = funcs.read_konlab_config(use_config)
     assert not config is None, f"Configuration doesn't seem to be valid or is empty, check {CONFIG_DIR}"
 
     logger.debug(f"Loaded config: {use_config}")
@@ -176,7 +176,7 @@ def main():
     if args.directory:
         use_directory = args.directory
         assert os.path.exists(use_directory), "directory {use_directory} doesn't exist or isn't valid"
-    
+
     #Extract format argument
     archive_format = ""
     if args.format:
@@ -194,7 +194,8 @@ def main():
                 dry_run=args.dry_run, 
                 profile_name=name, 
                 export_directory=use_directory, 
-                export_name=name, 
+                export_name=name,
+                config_path=use_config,
                 compress=args.compress, 
                 archive_format= archive_format,
             )
@@ -204,18 +205,18 @@ def main():
             profile_name=args.export_profile,
             export_directory=use_directory,
             export_name=args.export_name,
+            config_path=use_config,
             compress=args.compress,
             archive_format= archive_format,
         )
     elif args.reapply_profile:
         assert len(use_directory)>0, "ERROR: directory option is empty"
-        assert len(args.temp)>0, "ERROR: temp option is empty"
         funcs.reapply_export(
             config=config,
             dry_run=args.dry_run, 
             profile_name=args.reapply_profile, 
             backup_file_dir=use_directory,
-            temporal_dir=args.temp,
+            temporal_dir=args.temp_dir,
             delete_at_end=not args.no_clear
         )
     elif args.version:

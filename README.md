@@ -4,6 +4,8 @@
 
 ---
 
+NOTES: Bc of how the temporal directory is used when applying a profile, it is recommended to start/use an empty (or non-existent) directory
+
 <p align="center">
 <img src="https://user-images.githubusercontent.com/39525869/109611033-a6732c80-7b53-11eb-9ece-ffd9cef49047.gif" />
 </p>

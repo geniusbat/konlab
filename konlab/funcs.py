@@ -46,7 +46,7 @@ def exception_handler(func):
     return inner_func
 
 
-def mkdir(path):
+def mkdir(path) -> str:
     """Creates directory if it doesn't exist.
 
     Args:
@@ -120,7 +120,7 @@ def read_konlab_config(config_file) -> dict:
     return convert_none_to_empty_list(konlab_config)
 
 @exception_handler
-def list_profiles(data:dict):
+def list_profiles(data:dict) -> None:
     """Lists all the available profiles.
     """
 
@@ -136,7 +136,7 @@ def list_profiles(data:dict):
 
 
 @exception_handler
-def get_profile(config:dict, profile_name:str):
+def get_profile(config:dict, profile_name:str) -> None:
     """Get profile data
     """
 
@@ -147,7 +147,7 @@ def get_profile(config:dict, profile_name:str):
 
 
 @exception_handler
-def export(config:dict, dry_run:bool, profile_name:str, export_directory:str, export_name:str=None, compress:bool=False, archive_format:str=""):#profile_name, profile_list, profile_count, archive_dir, archive_name, force):
+def export(config:dict, dry_run:bool, profile_name:str, export_directory:str, export_name:str=None,config_path:str="", compress:bool=False, archive_format:str="") -> None:
     """It will export the specified profile as a ".knsv" to the specified directory.
        If there is no specified directory, the directory is set to the current working directory.
 
@@ -235,9 +235,14 @@ def export(config:dict, dry_run:bool, profile_name:str, export_directory:str, ex
                     if not os.path.exists(source):
                         logger.error(f"{source} doesn't exists, continuing with dry-run")
 
-    #Also backup the config file used, so later I can reuse it if needed
+    #Also backup the config used, so later I can reuse it if needed
     if not dry_run:
-        shutil.copy(CONFIG_FILE, full_export_path)
+        if len(config_path)==0:
+            logger.debug("Skip copying config file as none was given")
+        elif not os.path.exists(config_path):
+            logger.debug(f"Skip copying config file as it doesn't seem to exist: {config_path}")
+        else:
+            shutil.copy(config_path, full_export_path)
 
     if not dry_run and len(os.listdir(full_export_path))==0:
         logger.warning(f"WARNING: {full_export_path} seems to be empty! Proceeding anyways")
@@ -270,7 +275,7 @@ def export(config:dict, dry_run:bool, profile_name:str, export_directory:str, ex
 
 
 @exception_handler
-def reapply_export(config:dict, dry_run:bool, backup_file_dir:str, profile_name:str, temporal_dir:str, delete_at_end:bool=True):
+def reapply_export(config:dict, dry_run:bool, backup_file_dir:str, profile_name:str, temporal_dir:str, delete_at_end:bool=True) -> None:
     """
     Given a config and backup_file (that was generated from running "export") (the backup file can be an archive or an extracted directory from the file) reapply those files found inside for the given profile_name
     """
@@ -291,18 +296,22 @@ def reapply_export(config:dict, dry_run:bool, backup_file_dir:str, profile_name:
             logger.error(f"aux_copy: Given {source} wasn't valid")
 
     #Used for temporal_dir to ensure it is using an empty directory
-    def warn_if_dir_exists(dir:str) -> str:
+    def warn_if_dir_exists(dir:str, only_rename=False) -> str:
         if os.path.exists(dir) and len(os.listdir(dir))>0:
             new_path = dir+datetime.now().strftime("%d%m%Y_%H%M%S")
-            logger.warning(f"{dir} doesn't seem to be empty, instead moving to the new path: {new_path}")
+            if not only_rename:
+                logger.warning(f"{dir} doesn't seem to be empty, instead moving to the new path: {new_path}")
             return new_path
         return dir
 
     # run
     logger.info(f"Preparing to reapply config for {profile_name} from backup")
 
+    #If no temporal_dir was given default to /tmp
+    if len(temporal_dir)==0:
+        temporal_dir = warn_if_dir_exists("/tmp/", True) #/tmp already exists therefore function will return an unique folder inside it
+        logger.info(f"No temporal_dir was given, using {temporal_dir}")
     #Keep a copy of temporal_dir as it will be later be reasigned
-    temporal_dir = warn_if_dir_exists(temporal_dir)
     aux_temporal_dir = temporal_dir
 
     #Check if given backup_file_dir is a directory or an archive and copy contents to temporal_dir
@@ -319,7 +328,6 @@ def reapply_export(config:dict, dry_run:bool, backup_file_dir:str, profile_name:
         filename = os.path.splitext(os.path.basename(backup_file_dir))[0]
         temporal_dir = warn_if_dir_exists(temporal_dir)
         temporal_dir = os.path.join(temporal_dir, filename)
-        mkdir(temporal_dir)
         #Unpack file to temporal_dir
         shutil.unpack_archive(backup_file_dir, temporal_dir)
     #Work on moving files in temporal_dir to the corresponding locations
