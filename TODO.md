@@ -1,5 +1,7 @@
 -Think of new values to be parsed in parse.py
 -Add option to ensure removal of specific files
+-In cloudflare create subdomain and in heracles nginx point it to custom images for the README
+-Update readme
 
 DONES:
 -export vs save --> export will only "save" when exporting a profile, save will also export but also save content to .config (meaning, export is backup, save is for version/file control) --> Done: Just export, profiles instead of being created dynamically are fields in the yamls

@@ -1,25 +1,24 @@
 <h1 align=center> Konlab (Konlab for your homelab!) </h1>
-<p align=center>A CLI program based on Konlab that is rather oriented on 
- that will let you save and apply your Linux customizations with just one command! Konlab also lets you share your dot files to your friends in an instant! It officially supports KDE Plasma but it can be used on all other desktop environments too!</p>
+<p align=center>A CLI program based on Konsave that is rather oriented towards creating backups in homelabs with dispersed files</p>
 
 ---
-
-NOTES: Bc of how the temporal directory is used when applying a profile, it is recommended to start/use an empty (or non-existent) directory
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/39525869/109611033-a6732c80-7b53-11eb-9ece-ffd9cef49047.gif" />
-</p>
+</p> <!--TODO: Image from selfhosted nginx--> 
 
 ---
 
-## Installation -- TODO: Review
-Install from PyPI using pip  
-`python -m pip install konlab`
+## Installation 
+<p>As of now the source code is available, everything it needs is selfcontained in the project, therefore all you need is to download, install requirements and run main.py</p>
+<p>Creating a python will be added to the roadmap.</p>
+<i>
+    <p>Do note that the default config located at "config/default.yaml", isn't valid to start backing up your things</p>
+    <p>This is because every server and every user's needs are different and it would be very hard to come upon a generalized configuration</p>
+    <p>Therefore use the mentioned config file as an example to create your own!</p>
+</i>
 
-Install from PyPI using pipx  
-`pipx install konlab`
-
-## Usage 
+## Usage  --TODO
 ### Get Help
 `konlab -h` or `konlab --help`
 ### Save current configuration as a profile
@@ -49,9 +48,9 @@ or
 ### Wipe all profiles
 `konlab -w` or `konlab --wipe`
 
-  
 ---
 
+## Roadmap
 
 ## Old from previous README: TODO: Update with new guide
 
@@ -127,7 +126,7 @@ save:
 ---
 
 ## Contributing
-This is a very opinionated project that satisfies most of MY needs. As it uses Prayag2/konlab as upstream (https://github.com/Prayag2/konlab/) I think any effort will be much appreciated there.
+This is a very opinionated project that satisfies most of MY needs. As it uses Prayag2/konlab as upstream (https://github.com/Prayag2/konlab/), I would invite you to instead contribute to their awesome project as they sure do deserve the attention!
 
 ## License
 This project uses GNU General Public License 3.0
