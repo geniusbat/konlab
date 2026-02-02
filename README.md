@@ -30,26 +30,26 @@
 `--version`
 
 ### Specify config file
-`-c' or `--config`
+`-c` or `--config`
 
 ### List available profiles
-`-l' or `--list`
+`-l` or `--list`
 
 ### Print profile data
-`-p &lt;profile_name&gt;' or `--print &lt;profile_name&gt;`
+`-p <profile_name>` or `--print <profile_name>`
 Where &lt;profile_name&gt; is the profile_name available inside the configuration being used.
 
 ### Export profile
-`-e &lt;profile_name&gt;' or `--export-profile &lt;profile_name&gt;`
+`-e &lt;profile_name&gt;` or `--export-profile &lt;profile_name&gt;`
 Export the profile &lt;profile_name&gt; available inside the configuration being used.
 Some optional parameters:
-- `-d &lt;export_path&gt;' or `--directory &lt;export_path&gt;`
+- `-d &lt;export_path&gt;` or `--directory &lt;export_path&gt;`
 Specify the location where the data will be exported. By default it goes to ./exports/ .
-- `-n &lt;export_name&gt;' or `--export-name &lt;export_name&gt;`
+- `-n &lt;export_name&gt;` or `--export-name &lt;export_name&gt;`
 Specify the name of the folder/archive in which the data will be exported. By default uses the profile name.
-- `-z' or `--compress`
+- `-z` or `--compress`
 If using a valid format (meaning that it can be compressed, ie: zips and tars) creates a compressed archive. By default compression is not enabled
-- `-f &lt;format&gt;' or `--format &lt;format&gt;`
+- `-f &lt;format&gt;` or `--format &lt;format&gt;`
 Specify the name of the folder/archive in which the data will be exported. By default uses tar.
 - `--dry-run`
 Run as test, meaning that no actual files will be copied, useful to preventively detect errors.
@@ -58,13 +58,13 @@ Set how verbose the script should run, depends on how many v are added (0:info o
 
 ### Export all available profiles in configuration
 Some optional parameters:
-- `-d &lt;export_path&gt;' or `--directory &lt;export_path&gt;`
+- `-d &lt;export_path&gt;` or `--directory &lt;export_path&gt;`
 Specify the location where the data will be exported. By default it goes to ./exports/ .
-- `-n &lt;export_name&gt;' or `--export-name &lt;export_name&gt;`
+- `-n &lt;export_name&gt;` or `--export-name &lt;export_name&gt;`
 Specify the name of the folder/archive in which the data will be exported. By default uses the profile name.
 - `-z` or `--compress`
 If using a valid format (meaning that it can be compressed, ie: zips and tars) creates a compressed archive. By default compression is not enabled
-- `-f &lt;format&gt;' or `--format &lt;format&gt;`
+- `-f &lt;format&gt;` or `--format &lt;format&gt;`
 Specify the name of the folder/archive in which the data will be exported. By default uses tar.
 - `--dry-run`
 Run as test, meaning that no actual files will be copied, useful to preventively detect errors.
@@ -72,14 +72,14 @@ Run as test, meaning that no actual files will be copied, useful to preventively
 Set how verbose the script should run, depends on how many v are added (0:info only to console, 1: debug only to console, 2: debug to console and info to file, 3: write everything to file and console)
 
 ### Reapply profile 
-`-a &lt;profile_name&gt;' or `--reapply-profile &lt;profile_name&gt;`
+`-a &lt;profile_name&gt;` or `--reapply-profile &lt;profile_name&gt;`
 Reapply profile (meaning to automatically get files of the profile, given a configuration and backup directory, to the appropiate locations).
 Some optional parameters:
-- `-d &lt;backup_path&gt;' or `--directory &lt;backup_path&gt;`
+- `-d &lt;backup_path&gt;` or `--directory &lt;backup_path&gt;`
 Specify the location where backup data is located.
-- `-d &lt;temporal_directory&gt;' or `--directory &lt;temporal_directory&gt;`
+- `-d &lt;temporal_directory&gt;` or `--directory &lt;temporal_directory&gt;`
 Specify where to  hold profile files for reapplying a profile, folder doesn't need to exist as script will create it. By default /tmp is used.
-- `--no-clear'
+- `--no-clear`
 Do not remove temporal directory after reapplying profile.
 - `--dry-run`
 Run as test, meaning that no actual files will be copied, useful to preventively detect errors.
