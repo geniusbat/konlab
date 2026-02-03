@@ -9,6 +9,25 @@
 
 ---
 
+## Why Konlab? Why not just Konsave
+<p>
+    
+</p>
+
+---
+
+## Roadmap
+
+<i>Review "TODO.md" for a more up to date and shor-term oriented goals.</i>
+
+- Add common placeholders
+- Better file reapplying (I feel that if it fails there is no way back)
+- Profile performance of modules
+- Python package
+- Maybe common backup configuration
+
+---
+
 ## Installation 
 <p>As of now the source code is available, everything it needs (module-wise) is self-contained in the project, therefore all you need is to download, install requirements and run main.py</p>
 <p>Creating a python package will be added to the roadmap once the project reaches a certain maturity.</p>
@@ -19,8 +38,6 @@
     Therefore use the mentioned config file as an example to create your own!
   </p>
 </i>
-
-## Differences to Konsave
 
 ## Usage
 <p>These are the functionalities available in main.py</p>
@@ -90,88 +107,69 @@ Do not remove temporal directory after reapplying profile. <br>
 Run as test, meaning that no actual files will be copied, useful to preventively detect errors. <br>
 - `-v` or `--verbose` <br>
 Set how verbose the script should run, depends on how many v are added (0:info only to console, 1: debug only to console, 2: debug to console and info to file, 3: write everything to file and console) <br>
----
-
-## Roadmap
-
-<i>Review "TODO.md" for a more up to date and shor-term oriented goals.</i>
-
-- Add common placeholders
-- Better file reapplying (I feel that if it fails there is no way back)
-- Profile performance of modules
-- Python package
 
 ---
-TODO: Update with new guide
 
-## Editing the configuration file
-You can make changes to Konlab's configuration file according to your needs. The configuration file is located in `~/.config/konlab/conf.yaml`.
-When using Konlab for the first time, you'll be prompted to enter your desktop environment.  
-For KDE Plasma users, the configuration file will be pre-configured.
+## The configuration file
 
-### Format
-The configuration file should be formatted in the following way:
-```yaml
----
-save:
-    name:
-        location: "path/to/parent/directory"
-        entries: 
-        # These are files to be backed up.
-        # They should be present in the specified location.
-            - file1
-            - file2
-export:
-    # This includes files which will be exported with your profile.
-    # They will not be saved but only be exported and imported.
-    # These may include files like complete icon packs and themes..
-    name:
-        location: "path/to/parent/directory"
-        entries: 
-            - file1
-            - file2
-...
-```
+<p>
+    The configuration file is the backbone to actually make Konlab usefull. By default (as of 03/02/2026) Konlab doesn't provide any configuration/profiles, I feel every user's needs are different and it would be hard to come upon a generalized configuration.
+</p>
+<p>
+    Therefore it is imperative to design your own configuration to backup everything you need!
+</p>
 
-### Adding more files/folders to backup
-You can add more files/folders in the configuration file like this:
-```yaml
-save:
-    name:
-        location: "path/to/parent/directory"
-        entries:
-            - file1
-            - file2
-            - folder1
-            - folder2
-export:
-    anotherName:
-            location: "another/path/to/parent/directory"
-            entries:
-                - file1
-                - file2
-                - folder1
-                - folder2
-```
+<p>
+    In Konlab everything revolves around the profiles, defined in a configuration file. A profile is a set entries defining a location/directorie and the files inside it, that are to be backed up.
+    This would be the format for a profile: <br>
+    `
+    profile_name:
+        entry_name_A:
+            location: "/path_to_foobaar" 
+            files:
+                - "foo"
+                - "bar"
+    `
+    Where "profile_name" and "entry_name_A" are user-defined names. Meanwhile, "location" specifies the directory to be used for the entry, 
+    "files" is a yaml array of filenames (assumed to be contained in "location"), which will be saved/copied when backing up "profile_name". <br>
+    It is possible to specify a subfolder of "location" in "files", meaning that the folder (and all its contents, recursively) will be copied, it isn't possible to specify a file in a subfolder. Ie:
+    #### Valid 
+    `
+    profile_name:
+        entry_name_A:
+            location: "/path_to_foobaar" 
+            files:
+                - "subfolder_inside_path"
+    `
+    This will copy /path/subfolder_inside_path.
+    #### Invalid
+    `
+    profile_name:
+        entry_name_A:
+            location: "/path_to_foobaar" 
+            files:
+                - "subfolder_inside_path/file_inside"
+    `
+    Doing so will look for a file/folder named "subfolder_inside_path/item_inside" (escaping "/"). If desiring to copy only a specific file in a subfolder it is recommended to create another entry. Ie:
+    `
+    profile_name:
+        entry_name_A:
+            location: "/path_to_foobaar" 
+            files:
+                - "foo"
+        entry_name_B:
+            location: "/path_to_foobaar/subfolder_inside_path" 
+            files:
+                - "file_inside"
+    `
 
-### Using placeholders
-You can use a few placeholders in the `location` of each entry in the configuration file. These are:  
-`$HOME`: the home directory  
-`$CONFIG_DIR`: refers to "$HOME/.config/"  
-`$SHARE_DIR`: refers to "$HOME/.local/share"  
-`$BIN_DIR`: refers to "$HOME/.local/bin"  
-`${ENDS_WITH="text"}`: for folders with different names on different computers whose names end with the same thing.  
-The best example for this is the ".default-release" folder of firefox.  
-`${BEGINS_WITH="text"}`: for folders with different names on different computers whose names start with the same thing.  
+    #### Using "__all__"
+    <p>
+        If the first element of the "files" array is "__all__" it will skip the subsequent definitions and instead copy all the contents inside "location".
+    </p>
+</p>
 
-
-```yaml
-save:
-    firefox:
-        location: "$HOME/.mozilla/firefox/${ENDS_WITH='.default-release'}"
-        entries:
-            - chrome
-```
+TODO: Explain functions
 
 ---
 

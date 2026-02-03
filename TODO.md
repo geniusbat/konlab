@@ -3,6 +3,7 @@
 -In cloudflare create subdomain and in heracles nginx point it to custom images for the README
 -Update readme
 -Test export_all with multiple profiles and check if it properly works with and without setting export_name
+-Test what happens if I specify a file (instead of folder) in location
 
 DONES:
 -export vs save --> export will only "save" when exporting a profile, save will also export but also save content to .config (meaning, export is backup, save is for version/file control) --> Done: Just export, profiles instead of being created dynamically are fields in the yamls
