@@ -13,6 +13,13 @@
 
 profile_1:
     test_1:
-        location: "/home/phobos/Projects/konlab/test_data/import_data"
+        location: "/home/zeus/Projects/Programacion/konlab/test_data/import_data/profile1"
         files:
-            - "foo_folder"
+            - "foo"
+            - "/home/zeus/Projects/Programacion/konlab/test_data/import_data/profile2/bar"
+
+profile_2:
+    test_2:
+        location: "/home/zeus/Projects/Programacion/konlab/test_data/import_data/profile2"
+        files:
+            - "bar"

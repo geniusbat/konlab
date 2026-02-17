@@ -178,7 +178,7 @@ def export(config:dict, dry_run:bool, profile_name:str, export_directory:str, ex
             else:
                 shutil.copy(source, dest)
         else:
-            logger.error(f"Given {source} wasn't valid")
+            logger.error(f"Given source {source} doesn't exist")
 
 
     # run
@@ -221,6 +221,9 @@ def export(config:dict, dry_run:bool, profile_name:str, export_directory:str, ex
             #If not, import specificly given files
             for file in entry["files"]:
                 source = os.path.join(import_location, file)
+                #If file was given as an absolute path, only keep the filename
+                if os.path.isabs(file):
+                    file = os.path.splitext(os.path.basename(file))[0]
                 dest = os.path.join(entry_export_path, file)
                 logger.debug(f'Exporting "{file}"...')
                 if not dry_run:
@@ -288,7 +291,7 @@ def reapply_export(config:dict, dry_run:bool, backup_file_dir:str, profile_name:
             else:
                 shutil.copy(source, dest)
         else:
-            logger.error(f"aux_copy: Given {source} wasn't valid")
+            logger.error(f"aux_copy: Given source {source} doesn't exist")
 
     #Used for temporal_dir to ensure it is using an empty directory
     def warn_if_dir_exists(dir:str, only_rename=False) -> str:
@@ -348,8 +351,12 @@ def reapply_export(config:dict, dry_run:bool, backup_file_dir:str, profile_name:
         #If not just copy specified files in config
         else:
             for file in files:
-                source = os.path.join(temporal_dir, entry_name, file)
                 dest = os.path.join(apply_to_location, file)
+                #If file was given as an absolute path, only keep the filename, 
+                #it is assumed that if it comes as an absolute path then location is empty, thus "dest" must be defined before removing full path from file
+                if os.path.isabs(file):
+                    file = os.path.splitext(os.path.basename(file))[0]
+                source = os.path.join(temporal_dir, entry_name, file)
                 logger.debug(f'Applying "{file}"...')
                 if not dry_run:
                     aux_copy(source, dest)

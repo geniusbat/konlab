@@ -170,6 +170,10 @@ Set how verbose the script should run, depends on how many v are added (0:info o
     </p>
 </p>
 
+
+## Known errors
+- -Applying a profile where the location doesn't exist will give out a breaking error but will keep "pasted" previously copied files.
+
 TODO: Explain functions
 
 ---
