@@ -54,15 +54,14 @@
     These are the functions when executing main.py
 </p>
 
-### Get help
-`-h` or `--help`
+### Basic commands
+| Command | Description | Example |
+|---------|-------------|---------|
+| `-h, --help` | Get help | python main.y --help |
+| `--version` | Get version | python main.y --version |
+| `-c, --config-file` | Specify config file to use | `python main.py -c <config_file>` |
 
-### Get version
-`--version`
-
-### Specify config file
-`-c <config_file>` or `--config <config_file>` <br>
-Specify what config to use for working with profiles. <br>
+A valid config file containing profiles in yaml format must be given to use Konlab any further.
 
 ### List available profiles
 `-l` or `--list`
