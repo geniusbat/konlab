@@ -57,14 +57,16 @@
 ### Basic commands
 | Command | Description | Example |
 |---------|-------------|---------|
-| `-h, --help` | Get help | python main.y --help |
-| `--version` | Get version | python main.y --version |
+| `-h, --help` | Get help | `python main.y --help` |
+| `--version` | Get version | `python main.y --version` |
 | `-c, --config-file` | Specify config file to use | `python main.py -c <config_file>` |
 
-A valid config file containing profiles in yaml format must be given to use Konlab any further.
+<i>A valid config file containing profiles in yaml format must be given to use Konlab any further.</i>
 
 ### List available profiles
-`-l` or `--list`
+| Command | Description | Example |
+|---------|-------------|---------|
+| `-l, --list` | List available profiles given a valid yaml config file | `python main.y -c <config_file> --list` |
 
 ### Print profile data
 `-p <profile_name>` or `--print <profile_name>` <br>
