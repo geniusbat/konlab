@@ -1,8 +1,6 @@
 -Think of new values to be parsed in parse.py
--Add option to ensure removal of specific files
--In cloudflare create subdomain and in heracles nginx point it to custom images for the README
 -Update readme
--Think if I should fix naming error when exporting all profiles at the same time (export_name is ignored)
+-Think if I should fix naming error when exporting all profiles at the same time (export_name is ignored) --> 23/02/2026: Easiest fix will "dump" all profiles into a single file, which as of now I do not like, I want every profile to be kept separated.
 
 
 DONES:
@@ -16,3 +14,4 @@ DONES:
     -(17/02/2026) When exporting and applying, both don't fail, just ignores entry.
 -Allow specifying empty location and full path files in config --> Done, both for applying and exporting. If mixing full path file and non-empty location, file path takes precedence (due to how os.path.join prioritizes, there are no code baseguards so better not mix)
 -Test export_all with multiple profiles and check if it properly works with and without setting export_name --> (2026/02/17) All good except exporting all profiles with custom name, as it will be ignored and export with profile name
+-Add option to ensure removal of specific files when applying a profile

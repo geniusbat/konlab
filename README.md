@@ -2,12 +2,6 @@
 <p align=center>A CLI program based on Konsave that is rather oriented towards creating backups in homelabs with dispersed files</p>
 
 ---
-
-<p align="center">
-    <img src="https://staticserved.gmasvc.com/image.png" alt="TestImage">
-<img src="https://user-images.githubusercontent.com/39525869/109611033-a6732c80-7b53-11eb-9ece-ffd9cef49047.gif" />
-</p> <!--TODO: Image from selfhosted nginx--> 
-
 ---
 
 ## Why Konlab? Why not just Konsave
@@ -172,9 +166,8 @@ Set how verbose the script should run, depends on how many v are added (0:info o
 
 
 ## Known errors
-- -Applying a profile where the location doesn't exist will give out a breaking error but will keep "pasted" previously copied files.
-
-TODO: Explain functions
+- -Applying a profile where the location doesn't exist will stop any further execution but will keep "pasted" previously copied files.
+- -Exporting all profiles ("export-all" option) will ignore "named-export".
 
 ---
 

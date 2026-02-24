@@ -13,13 +13,14 @@
 
 profile_1:
     test_1:
-        location: "/home/zeus/Projects/Programacion/konlab/test_data/import_data/profile1"
+        location: "/home/zeus/Projects/Programacion/konlab/test_data/apply_data/profile1"
         files:
             - "foo"
-            - "/home/zeus/Projects/Programacion/konlab/test_data/import_data/profile2/bar"
+        delete:
+            - "/home/zeus/Projects/Programacion/konlab/test_data/apply_data/profile1/bar"
 
 profile_2:
     test_2:
-        location: "/home/zeus/Projects/Programacion/konlab/test_data/import_data/profile2"
+        location: "/home/zeus/Projects/Programacion/konlab/test_data/apply_data/profile2"
         files:
             - "bar"

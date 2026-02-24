@@ -255,7 +255,10 @@ def main():
                 dry_run=args.dry_run,
                 profile_name=name,
                 export_directory=use_directory,
-                export_name=name,
+                export_name=name, #23/02/2026: I can instead use args.export_name to solve incorrect naming
+                                    # (ignored export_name parameter) when exporting all profiles,
+                                    # however, this will "dump" all profiles into a single file,
+                                    # which as of now I do not like, I want every profile to be kept separated.
                 config_path=use_config,
                 compress=args.compress,
                 archive_format= archive_format,

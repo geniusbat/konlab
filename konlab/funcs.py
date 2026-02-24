@@ -328,6 +328,7 @@ def reapply_export(config:dict, dry_run:bool, backup_file_dir:str, profile_name:
         temporal_dir = os.path.join(temporal_dir, filename)
         #Unpack file to temporal_dir
         shutil.unpack_archive(backup_file_dir, temporal_dir)
+
     #Work on moving files in temporal_dir to the corresponding locations
     logger.info("Starting to apply profile files to corresponding locations")
     profile_data = get_profile(config, profile_name)
@@ -366,9 +367,31 @@ def reapply_export(config:dict, dry_run:bool, backup_file_dir:str, profile_name:
                         logger.error(f"{file} at {source} does not exist in backup file")
                     if not os.path.exists(apply_to_location):
                         logger.error(f"{apply_to_location} doesn't exists, continuing with dry-run")
+    
+        #Delete specified files in entry
+        to_delete = entry["delete"]
+        def aux_delete_file(action, name, exc):
+            os.remove(name)
+        
+        for file in to_delete:
+            dest = os.path.join(apply_to_location, file)
+            if dry_run:
+                logger.info(f"Dry run: I would delete {dest}")
+                if not os.path.exists(dest):
+                    logger.info(f"{dest} does not exist")
+            else:
+                if not os.path.exists(dest):
+                    logger.debug(f"{dest} does not exist")
+                else:
+                    logger.info(f"Deleting file {dest}")
+                    try:
+                        shutil.rmtree(dest)
+                    except NotADirectoryError:
+                        os.remove(dest)
+
 
     if dry_run or delete_at_end:
-        logger.info(f"Deleting temporal directory: {aux_temporal_dir}")
+        logger.debug(f"Deleting temporal directory: {aux_temporal_dir}")
         shutil.rmtree(aux_temporal_dir)
     else:
         logger.debug(f"Did not remove temporal directory: {aux_temporal_dir}")
