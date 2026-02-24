@@ -124,6 +124,8 @@ Set how verbose the script should run, depends on how many v are added (0:info o
             files:
                 - "foo"
                 - "bar"
+            delete:
+                - "extra"
     `
     Where "profile_name" and "entry_name_A" are user-defined names. Meanwhile, "location" specifies the directory to be used for the entry, 
     "files" is a yaml array of filenames (assumed to be contained in "location"), which will be saved/copied when backing up "profile_name". <br>
@@ -161,6 +163,19 @@ Set how verbose the script should run, depends on how many v are added (0:info o
     #### Using "__all__"
     <p>
         If the first element of the "files" array is "__all__" it will skip the subsequent definitions and instead copy all the contents inside "location".
+    </p>
+    #### Delete files when applying entry
+    profile_name:
+        entry_name_A:
+            location: "/path_to_foobaar" 
+            files:
+                - "foo"
+                - "bar"
+            delete:
+                - "extra"
+    `
+    <p>
+        By using "delete" you can specify files/folders in "location" to be automatically deleted when applying a profile. 
     </p>
 </p>
 
