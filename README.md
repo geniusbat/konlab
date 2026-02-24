@@ -4,6 +4,7 @@
 ---
 
 ## Why Konlab? Why not just Konsave?
+
 <p>
     Konlab  is a CLI program used to manage backups of config files in homelab environments where configuration files are scattered across the system. Thus, Konlab can be used to unify and archive configurations for the various applications in use.
 </p>
@@ -37,6 +38,7 @@
 ---
 
 ## Installation 
+
 <p>As of now the source code is available, everything it needs (module-wise) is self-contained in the project, therefore all you need is to download, install requirements.txt and run main.py</p>
 <p>
     It is recommended to create a config folder in the root of the folder where logs will be stored (if needed) and to store config files. 
@@ -53,11 +55,13 @@
 </i>
 
 ## Usage
+
 <p>
     These are the functions when executing main.py
 </p>
 
 ### Basic commands
+
 | Command | Description | Example |
 |---------|-------------|---------|
 | `-h, --help` | Get help | `python main.y --help` |
@@ -67,16 +71,19 @@
 <i>A valid config file containing profiles in yaml format must be given to use Konlab any further.</i>
 
 ### List available profiles
+
 | Command | Description | Example |
 |---------|-------------|---------|
 | `-l, --list` | List available profiles given a valid yaml config file | `python main.y -c <config_file> --list` |
 
 ### Print profile data
+
 | Command | Description | Example |
 |---------|-------------|---------|
 | `-p, --print` | Print profile data for given config file | `python main.y -c <config_file> --print <profile_name>` |
 
 ### Export profile
+
 | Command | Description | Example |
 |---------|-------------|---------|
 | `-e, --export-profile` | Export (backup) all the files of a profile in a given config file | `python main.y -c <config_file> --export-profile <profile_name> [options]` |
@@ -85,6 +92,7 @@
 This commands accepts a set of options.
 
 #### Options
+
 | Option | Description |
 |---------|-------------|
 | `-d, --directory <export_path>` | Specify the location where the data will be exported. By default it goes to ./exports/ | 
@@ -95,6 +103,7 @@ This commands accepts a set of options.
 | `-v, --verbose` | Set how verbose the script should run, depends on how many v are added (0:info only to console, 1: debug only to console, 2: debug to console and info to file, 3: write everything to file and console) | 
 
 ### Reapply profile
+
 | Command | Description | Example |
 |---------|-------------|---------|
 | `-a, --reapply-profile` | Reapply profile (meaning to automatically get files of the profile, given a configuration and backup directory, to the appropiate locations) | `python main.y -c <config_file> --reapply-profile <profile_name> [options]` |
@@ -102,6 +111,7 @@ This commands accepts a set of options.
 This commands accepts a set of options.
 
 #### Options
+
 | Option | Description |
 |---------|-------------|
 | `-d, --directory <backup_path>` | Specify the location where backup data is located | 
@@ -113,6 +123,7 @@ This commands accepts a set of options.
 
 
 #### Verbosity
+
 By adding the option `-v` or `--verbose` one can define the verbosity of the execution. By adding more than one "v" (ie: `-vv`) the level is increased:
 | Level | Console Output | File output |
 |---------|-------------|---------|
@@ -121,7 +132,11 @@ By adding the option `-v` or `--verbose` one can define the verbosity of the exe
 | 2 | Show debug logs | Show info logs |
 | 3 | Show debug logs | Show debug logs |
 
-If file logging is enabled (by using a high enough verbosity level), the default directory will be in `config/logs.log` in the root folder of the module. 
+<p>
+  If file logging is enabled (by using a high enough verbosity level), the default directory will be in `config/logs.log` in the root folder of the module. 
+</p>
+
+
 
 ---
 
@@ -143,7 +158,8 @@ If file logging is enabled (by using a high enough verbosity level), the default
 <p>
     This would be the format for a profile:
 </p>
-`
+
+```
 profile_name:
     entry_name_A:
         location: "/path_to_foobaar" 
@@ -152,14 +168,16 @@ profile_name:
             - "bar"
         delete:
             - "extra"
-`
+```
 <p>
     Where "profile_name" and "entry_name_A" are user-defined names. Meanwhile, "location" specifies the directory to be used for the entry, "files" is a yaml array of filenames (assumed to be contained in "location"), which will be saved/copied when backing up "profile_name".
 </p> 
 <p>
     It is possible to specify a subfolder of "location" in "files", meaning that the folder (and all its contents, recursively) will be copied, it isn't possible to specify a file in a subfolder. Ie:
 </p>
-#### Valid 
+
+#### Valid
+
 ```
 profile_name:
     entry_name_A:
@@ -169,6 +187,7 @@ profile_name:
 ```
 This will copy /path/subfolder_inside_path.
 #### Invalid
+
 ```
 profile_name:
     entry_name_A:
@@ -177,6 +196,7 @@ profile_name:
             - "subfolder_inside_path/file_inside"
 ```
 Doing so will look for a file/folder named "subfolder_inside_path/item_inside" (escaping "/"). If desiring to copy only a specific file in a subfolder it is recommended to create another entry. Ie:
+
 ```
 profile_name:
     entry_name_A:
@@ -193,6 +213,7 @@ profile_name:
 <p>
     If the first element of the "files" array is "__all__" it will skip the subsequent definitions and instead copy all the contents inside "location".
 </p>
+
 #### Delete files when applying entry
 profile_name:
     entry_name_A:
@@ -209,8 +230,8 @@ profile_name:
 
 
 ## Known errors
-- -Applying a profile where the location doesn't exist will stop any further execution but will keep "pasted" previously copied files.
-- -Exporting all profiles ("export-all" option) will ignore "named-export".
+- Applying a profile where the location doesn't exist will stop any further execution but will keep "pasted" previously copied files.
+- Exporting all profiles ("export-all" option) will ignore "named-export".
 
 ---
 
