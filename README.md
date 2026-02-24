@@ -20,7 +20,7 @@
 - Profile: Set of configuration files.
 - Config file: Yaml file defining a set of profiles. 
 - Export: Synonym to backup, basicallly take all the files defined for a profile in a config file and coppy/save them to a different location and archive it. 
-- Applying: Moving the files back from an exported archive to its origin. 
+- Reapplying: Moving the files back from an exported archive to its origin. 
 
 ---
 
@@ -76,51 +76,37 @@
 ### Export profile
 | Command | Description | Example |
 |---------|-------------|---------|
-| `-e, --export-profile` | Export (backup) all the files of a profile in a given config file | `python main.y -c <config_file> --export-profile <profile_name>` |
+| `-e, --export-profile` | Export (backup) all the files of a profile in a given config file | `python main.y -c <config_file> --export-profile <profile_name> [options]` |
+| `--export-all` | Export all the profiles found in the config file | `python main.y -c <config_file> --export-all [options]` |
 
-This commands a set of options.
+This commands accepts a set of options.
 
 #### Options
 | Option | Description |
 |---------|-------------|
 | `-d, --directory <export_path>` | Specify the location where the data will be exported. By default it goes to ./exports/ | 
-| `-n, --export-name <export_name>` | Specify the name of the folder/archive in which the data will be exported to. By default the profile name is used | 
+| `-n, --export-name <export_name>` | Specify the name of the folder/archive in which the data will be exported to. By default the profile name is used; does not work with `export-all` | 
 | `-z, --compress` | If using a valid format (meaning that it can be compressed, ie: zips and tars) creates a compressed archive. By default compression is not enabled | 
 | `-f, --format <export_format>` | Specify what format the exported data will be saved as. By default data is archived as a tar, specify "null" to export as plain directory | 
 | `--dry-run` | Run as test, meaning that no actual files will be copied, useful to preventively detect errors. | 
 | `-v, --verbose` | Set how verbose the script should run, depends on how many v are added (0:info only to console, 1: debug only to console, 2: debug to console and info to file, 3: write everything to file and console) | 
 
-### Export all available profiles in configuration
-`-export-all`
-Export all available profiles for configuration being used.
-#### Some optional parameters:
-- `-d <export_path>` or `--directory <export_path>` <br>
-Specify the location where the data will be exported. By default it goes to ./exports/ . <br>
-- `-n <export_name>` or `--export-name <export_name>` <br>
-Specify the name of the folder/archive in which the data will be exported. By default uses the profile name. <br>
-- `-z` or `--compress` <br>
-If using a valid format (meaning that it can be compressed, ie: zips and tars) creates a compressed archive. By default compression is not enabled <br>
-- `-f <format>` or `--format <format>` <br>
-Specify the name of the folder/archive in which the data will be exported. By default uses tar. <br>
-- `--dry-run` <br>
-Run as test, meaning that no actual files will be copied, useful to preventively detect errors. <br>
-- `-v` or `--verbose` <br>
-Set how verbose the script should run, depends on how many v are added (0:info only to console, 1: debug only to console, 2: debug to console and info to file, 3: write everything to file and console) <br>
+### Reapply profile
+| Command | Description | Example |
+|---------|-------------|---------|
+| `-a, --reapply-profile` | Reapply profile (meaning to automatically get files of the profile, given a configuration and backup directory, to the appropiate locations) | `python main.y -c <config_file> --reapply-profile <profile_name> [options]` |
 
-### Reapply profile 
-`-a <profile_name>` or `--reapply-profile <profile_name>` <br>
-Reapply profile (meaning to automatically get files of the profile, given a configuration and backup directory, to the appropiate locations). <br>
-#### Some optional parameters: 
-- `-d <backup_path>` or `--directory <backup_path>` <br>
-Specify the location where backup data is located. <br>
-- `-d <temporal_directory>` or `--directory <temporal_directory>` <br>
-Specify where to  hold profile files for reapplying a profile, folder doesn't need to exist as script will create it. By default /tmp is used. <br>
-- `--no-clear` <br>
-Do not remove temporal directory after reapplying profile. <br>
-- `--dry-run` <br>
-Run as test, meaning that no actual files will be copied, useful to preventively detect errors. <br>
-- `-v` or `--verbose` <br>
-Set how verbose the script should run, depends on how many v are added (0:info only to console, 1: debug only to console, 2: debug to console and info to file, 3: write everything to file and console) <br>
+This commands accepts a set of options.
+
+#### Options
+| Option | Description |
+|---------|-------------|
+| `-d, --directory <backup_path>` | Specify the location where backup data is located | 
+| `--temp-dir <temporal_directory>` | Specify where to  hold profile files while reapplying a profile, folder doesn't need to exist as the script will create it. By default /tmp is used | 
+| `-z, --compress` | If using a valid format (meaning that it can be compressed, ie: zips and tars) creates a compressed archive. By default compression is not enabled | 
+| `--no-clear` | Do not remove temporal directory after reapplying profile | 
+| `--dry-run` | Run as test, meaning that no actual files will be copied, useful to preventively detect errors. | 
+| `-v, --verbose` | Set how verbose the script should run, depends on how many v are added (0:info only to console, 1: debug only to console, 2: debug to console and info to file, 3: write everything to file and console) | 
 
 ---
 
