@@ -18,7 +18,8 @@
 ### Nomenclature
 
 - Profile: Set of configuration files.
-- Export: Synonym to backup, basicallly take whatever is defined in a profile and coppy/save it to a different location and archive it. 
+- Config file: Yaml file defining a set of profiles. 
+- Export: Synonym to backup, basicallly take all the files defined for a profile in a config file and coppy/save them to a different location and archive it. 
 - Applying: Moving the files back from an exported archive to its origin. 
 
 ---
