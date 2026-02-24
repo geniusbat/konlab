@@ -14,10 +14,13 @@
 <p>
     Konlab's goal is to be as simple on its config as possible to let the user transparently define the expected behaviour. In Konsave most of the configuration needed to work is stored in the file "consts.py", while Konlab expects the user to define everything when executing the program.
 </p>
+
 ### Nomenclature
+
 - Profile: Set of configuration files.
 - Export: Synonym to backup, basicallly take whatever is defined in a profile and coppy/save it to a different location and archive it. 
 - Applying: Moving the files back from an exported archive to its origin. 
+
 ---
 
 ## Roadmap
