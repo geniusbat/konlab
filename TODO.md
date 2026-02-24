@@ -1,6 +1,7 @@
 -Think of new values to be parsed in parse.py
 -Update readme
 -Think if I should fix naming error when exporting all profiles at the same time (export_name is ignored) --> 23/02/2026: Easiest fix will "dump" all profiles into a single file, which as of now I do not like, I want every profile to be kept separated.
+-Specify where file logs are saved
 
 
 DONES:

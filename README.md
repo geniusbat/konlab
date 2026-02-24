@@ -39,6 +39,9 @@
 ## Installation 
 <p>As of now the source code is available, everything it needs (module-wise) is self-contained in the project, therefore all you need is to download, install requirements.txt and run main.py</p>
 <p>
+    It is recommended to create a config folder in the root of the folder where logs will be stored (if needed) and to store config files. 
+</p>
+<p>
     The next step would be creating a yaml file with the configuration for backing up files. 
 </p>
 <i>
@@ -107,6 +110,18 @@ This commands accepts a set of options.
 | `--no-clear` | Do not remove temporal directory after reapplying profile | 
 | `--dry-run` | Run as test, meaning that no actual files will be copied, useful to preventively detect errors. | 
 | `-v, --verbose` | Set how verbose the script should run, depends on how many v are added (0:info only to console, 1: debug only to console, 2: debug to console and info to file, 3: write everything to file and console) | 
+
+
+#### Verbosity
+By adding the option `-v` or `--verbose` one can define the verbosity of the execution. By adding more than one "v" (ie: `-vv`) the level is increased:
+| Level | Console Output | File output |
+|---------|-------------|---------|
+| 0 | Show info logs | No file output |
+| 1 | Show debug logs | No file output |
+| 2 | Show debug logs | Show info logs |
+| 3 | Show debug logs | Show debug logs |
+
+If file logging is enabled (by using a high enough verbosity level), the default directory will be in `config/logs.log` in the root folder of the module. 
 
 ---
 
