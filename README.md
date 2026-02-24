@@ -69,25 +69,26 @@
 | `-l, --list` | List available profiles given a valid yaml config file | `python main.y -c <config_file> --list` |
 
 ### Print profile data
-`-p <profile_name>` or `--print <profile_name>` <br>
-Where <profile_name> is the profile_name available inside the configuration being used. <br>
+| Command | Description | Example |
+|---------|-------------|---------|
+| `-p, --print` | Print profile data for given config file | `python main.y -c <config_file> --print <profile_name>` |
 
 ### Export profile
-`-e <profile_name>` or `--export-profile <profile_name>` <br>
-Export the profile <profile_name> available inside the configuration being used. <br>
-#### Some optional parameters:
-- `-d <export_path>` or `--directory <export_path>` <br>
-Specify the location where the data will be exported. By default it goes to ./exports/ . <br>
-- `-n <export_name>` or `--export-name <export_name>` <br>
-Specify the name of the folder/archive in which the data will be exported. By default uses the profile name. <br>
-- `-z` or `--compress` <br>
-If using a valid format (meaning that it can be compressed, ie: zips and tars) creates a compressed archive. By default compression is not enabled <br>
-- `-f <format>` or `--format <format>` <br>
-Specify the name of the folder/archive in which the data will be exported. By default uses tar. <br>
-- `--dry-run` <br>
-Run as test, meaning that no actual files will be copied, useful to preventively detect errors. <br>
-- `-v` or `--verbose` <br>
-Set how verbose the script should run, depends on how many v are added (0:info only to console, 1: debug only to console, 2: debug to console and info to file, 3: write everything to file and console) <br>
+| Command | Description | Example |
+|---------|-------------|---------|
+| `-e, --export-profile` | Export (backup) all the files of a profile in a given config file | `python main.y -c <config_file> --export-profile <profile_name>` |
+
+This commands a set of options.
+
+#### Options
+| Option | Description |
+|---------|-------------|
+| `-d, --directory <export_path>` | Specify the location where the data will be exported. By default it goes to ./exports/ | 
+| `-n, --export-name <export_name>` | Specify the name of the folder/archive in which the data will be exported to. By default the profile name is used | 
+| `-z, --compress` | If using a valid format (meaning that it can be compressed, ie: zips and tars) creates a compressed archive. By default compression is not enabled | 
+| `-f, --format <export_format>` | Specify what format the exported data will be saved as. By default data is archived as a tar, specify "null" to export as plain directory | 
+| `--dry-run` | Run as test, meaning that no actual files will be copied, useful to preventively detect errors. | 
+| `-v, --verbose` | Set how verbose the script should run, depends on how many v are added (0:info only to console, 1: debug only to console, 2: debug to console and info to file, 3: write everything to file and console) | 
 
 ### Export all available profiles in configuration
 `-export-all`
