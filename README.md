@@ -10,6 +10,8 @@
 <p>
     Konsave is an amazing tool to quickly play around and export/import configurations, however, I felt the main goal was to cover desktop environments, and though it can be used to backup anything you might need,
     I felt it was lacking on some "niceties" when making backups (ie: compression and custom export directories) while having unnecessary functionalities (ie: saving/applying profiles). 
+</p>
+<p>
     Konlab's goal is to be as simple on its config as possible to let the user transparently define the expected behaviour. In Konsave most of the configuration needed to work is stored in the file "consts.py", while Konlab expects the user to define everything when executing the program.
 </p>
 
