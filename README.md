@@ -5,11 +5,11 @@
 
 ## Why Konlab? Why not just Konsave?
 <p>
-    Konlab  is a CLI program used to manage backups of config files in servers/homelabs where all the files are dispersed accross the computer. Thus, Konlab can be used to unify and archive configurations for the various applications in use.
+    Konlab  is a CLI program used to manage backups of config files in homelab environments where configuration files are scattered across the system. Thus, Konlab can be used to unify and archive configurations for the various applications in use.
 </p>
 <p>
     Konsave is an amazing tool to quickly play around and export/import configurations, however, I felt the main goal was to cover desktop environments, and though it can be used to backup anything you might need,
-    I felt it was lacking on some "niceties" when making backups (ie: compression and custom export directories) while having unnecessary functionalities (ie: saving/applying profiles). 
+    I felt it was lacking on some "niceties" when making backups (ie: compression and custom export directories, deleting files) while having unnecessary functionalities (ie: locally saving profiles). 
 </p>
 <p>
     Konlab's goal is to be as simple on its config as possible to let the user transparently define the expected behaviour. In Konsave most of the configuration needed to work is stored in the file "consts.py", while Konlab expects the user to define everything when executing the program.
@@ -30,8 +30,10 @@
 ---
 
 ## Installation 
-<p>As of now the source code is available, everything it needs (module-wise) is self-contained in the project, therefore all you need is to download, install requirements and run main.py</p>
-<p>Creating a python package will be added to the roadmap once the project reaches a certain maturity.</p>
+<p>As of now the source code is available, everything it needs (module-wise) is self-contained in the project, therefore all you need is to download, install requirements.txt and run main.py</p>
+<p>
+    The next step would be creating a yaml file with the configuration for backing up files. 
+</p>
 <i>
   <p>
     Do note that the default config located at "config/default.yaml", isn't valid to start backing up your things.
@@ -41,7 +43,9 @@
 </i>
 
 ## Usage
-<p>These are the functionalities available in main.py</p>
+<p>
+    These are the functions when executing main.py
+</p>
 
 ### Get help
 `-h` or `--help`
@@ -111,13 +115,16 @@ Set how verbose the script should run, depends on how many v are added (0:info o
 
 ---
 
-## The configuration file
+## The yaml configuration file
 
 <p>
     The configuration file is the backbone to actually make Konlab usefull. By default (as of 03/02/2026) Konlab doesn't provide any configuration/profiles, I feel every user's needs are different and it would be hard to come upon a generalized configuration.
 </p>
 <p>
     Therefore it is imperative to design your own configuration to backup everything you need!
+</p>
+<p>
+    A config file is a yaml containing profiles.
 </p>
 
 <p>
