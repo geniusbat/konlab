@@ -1,12 +1,16 @@
-<h1 align=center> Konlab (Konlab for your homelab!) </h1>
+<h1 align=center> Konlab (Konsave for your homelab!) </h1>
 <p align=center>A CLI program based on Konsave that is rather oriented towards creating backups in homelabs with dispersed files</p>
 
 ---
----
 
-## Why Konlab? Why not just Konsave
+## Why Konlab? Why not just Konsave?
 <p>
-    
+    Konlab  is a CLI program used to manage backups of config files in servers/homelabs where all the files are dispersed accross the computer. Thus, Konlab can be used to unify and archive configurations for the various applications in use.
+</p>
+<p>
+    Konsave is an amazing tool to quickly play around and export/import configurations, however, I felt the main goal was to cover desktop environments, and though it can be used to backup anything you might need,
+    I felt it was lacking on some "niceties" when making backups (ie: compression and custom export directories) while having unnecessary functionalities (ie: saving/applying profiles). 
+    Konlab's goal is to be as simple on its config as possible to let the user transparently define the expected behaviour. In Konsave most of the configuration needed to work is stored in the file "consts.py", while Konlab expects the user to define everything when executing the program.
 </p>
 
 ---
@@ -19,7 +23,7 @@
 - Better file reapplying (I feel that if it fails there is no way back)
 - Profile performance of modules
 - Python package
-- Maybe common backup configuration
+- Exporting to remote servers
 
 ---
 
