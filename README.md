@@ -139,70 +139,72 @@ If file logging is enabled (by using a high enough verbosity level), the default
 
 <p>
     In Konlab everything revolves around the profiles, defined in a configuration file. A profile is a set entries defining a location/directorie and the files inside it, that are to be backed up.
-    This would be the format for a profile: <br>
-    ```
-    profile_name:
-        entry_name_A:
-            location: "/path_to_foobaar" 
-            files:
-                - "foo"
-                - "bar"
-            delete:
-                - "extra"
-    ```
-    <p>
-        Where "profile_name" and "entry_name_A" are user-defined names. Meanwhile, "location" specifies the directory to be used for the entry, "files" is a yaml array of filenames (assumed to be contained in "location"), which will be saved/copied when backing up "profile_name".
-    </p> 
-    <p>
-        It is possible to specify a subfolder of "location" in "files", meaning that the folder (and all its contents, recursively) will be copied, it isn't possible to specify a file in a subfolder. Ie:
-    </p>
-    #### Valid 
-    ```
-    profile_name:
-        entry_name_A:
-            location: "/path_to_foobaar" 
-            files:
-                - "subfolder_inside_path"
-    ```
-    This will copy /path/subfolder_inside_path.
-    #### Invalid
-    ```
-    profile_name:
-        entry_name_A:
-            location: "/path_to_foobaar" 
-            files:
-                - "subfolder_inside_path/file_inside"
-    ```
-    Doing so will look for a file/folder named "subfolder_inside_path/item_inside" (escaping "/"). If desiring to copy only a specific file in a subfolder it is recommended to create another entry. Ie:
-    ```
-    profile_name:
-        entry_name_A:
-            location: "/path_to_foobaar" 
-            files:
-                - "foo"
-        entry_name_B:
-            location: "/path_to_foobaar/subfolder_inside_path" 
-            files:
-                - "file_inside"
-    ```
+</p>
+<p>
+    This would be the format for a profile:
+</p>
+`
+profile_name:
+    entry_name_A:
+        location: "/path_to_foobaar" 
+        files:
+            - "foo"
+            - "bar"
+        delete:
+            - "extra"
+`
+<p>
+    Where "profile_name" and "entry_name_A" are user-defined names. Meanwhile, "location" specifies the directory to be used for the entry, "files" is a yaml array of filenames (assumed to be contained in "location"), which will be saved/copied when backing up "profile_name".
+</p> 
+<p>
+    It is possible to specify a subfolder of "location" in "files", meaning that the folder (and all its contents, recursively) will be copied, it isn't possible to specify a file in a subfolder. Ie:
+</p>
+#### Valid 
+```
+profile_name:
+    entry_name_A:
+        location: "/path_to_foobaar" 
+        files:
+            - "subfolder_inside_path"
+```
+This will copy /path/subfolder_inside_path.
+#### Invalid
+```
+profile_name:
+    entry_name_A:
+        location: "/path_to_foobaar" 
+        files:
+            - "subfolder_inside_path/file_inside"
+```
+Doing so will look for a file/folder named "subfolder_inside_path/item_inside" (escaping "/"). If desiring to copy only a specific file in a subfolder it is recommended to create another entry. Ie:
+```
+profile_name:
+    entry_name_A:
+        location: "/path_to_foobaar" 
+        files:
+            - "foo"
+    entry_name_B:
+        location: "/path_to_foobaar/subfolder_inside_path" 
+        files:
+            - "file_inside"
+```
 
-    #### Using "__all__"
-    <p>
-        If the first element of the "files" array is "__all__" it will skip the subsequent definitions and instead copy all the contents inside "location".
-    </p>
-    #### Delete files when applying entry
-    profile_name:
-        entry_name_A:
-            location: "/path_to_foobaar" 
-            files:
-                - "foo"
-                - "bar"
-            delete:
-                - "extra"
-    `
-    <p>
-        By using "delete" you can specify files/folders in "location" to be automatically deleted when applying a profile. 
-    </p>
+#### Using "__all__"
+<p>
+    If the first element of the "files" array is "__all__" it will skip the subsequent definitions and instead copy all the contents inside "location".
+</p>
+#### Delete files when applying entry
+profile_name:
+    entry_name_A:
+        location: "/path_to_foobaar" 
+        files:
+            - "foo"
+            - "bar"
+        delete:
+            - "extra"
+`
+<p>
+    By using "delete" you can specify files/folders in "location" to be automatically deleted when applying a profile. 
 </p>
 
 
