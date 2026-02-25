@@ -1,5 +1,5 @@
 <h1 align=center> Konlab (Konsave for your homelab!) </h1>
-<p align=center>A CLI program based on Konsave that is rather oriented towards creating backups in homelabs with dispersed files</p>
+<p align=center>A CLI program based on Konsave oriented towards creating backups in homelabs with dispersed files</p>
 
 ---
 

@@ -2,12 +2,10 @@
 This module contains all the functions for konlab.
 """
 
-import os, sys, shutil, traceback, logging
+import os, shutil, logging
 from datetime import datetime
-from zipfile import is_zipfile, ZipFile
 from consts import (
     EXPORT_FORMAT,
-    LOGS_FILE
 )
 from parse import TOKEN_SYMBOL, tokens, parse_functions, parse_keywords
 
@@ -145,7 +143,7 @@ def get_profile(config:dict, profile_name:str) -> None:
 
 
 @exception_handler
-def export(config:dict, dry_run:bool, profile_name:str, export_directory:str, export_name:str=None,config_path:str="", compress:bool=False, archive_format:str="") -> None:
+def export(*, config:dict, dry_run:bool, profile_name:str, export_directory:str, export_name:str=None,config_path:str="", compress:bool=False, archive_format:str="") -> None:
     """It will export the specified profile as a ".knsv" to the specified directory.
        If there is no specified directory, the directory is set to the current working directory.
     """
@@ -194,7 +192,7 @@ def export(config:dict, dry_run:bool, profile_name:str, export_directory:str, ex
     #Create full_export_path directory if needed
     mkdir(full_export_path)
     logger.info(f"Starting export of profile {profile_name} to {full_export_path}")
-    
+
     profile_data = get_profile(config, profile_name)
     #Main loop to export files
     for entry_name in profile_data.keys():
@@ -206,7 +204,7 @@ def export(config:dict, dry_run:bool, profile_name:str, export_directory:str, ex
         logger.debug(f"For entry {entry_name}:")
         #Check if first element of "files" for given entry is "__all__", in that case copy all files in the given import_location
         if len(entry["files"])>0 and entry["files"][0] == "__all__":
-            logger.debug(f'Exporting all files...')
+            logger.debug('Exporting all files...')
             if not dry_run:
                 aux_copy(
                     import_location,
@@ -244,8 +242,8 @@ def export(config:dict, dry_run:bool, profile_name:str, export_directory:str, ex
 
     if not dry_run and len(os.listdir(full_export_path))==0:
         logger.warning(f"WARNING: {full_export_path} seems to be empty! Proceeding anyways")
-    
-    #Create archive file 
+
+    #Create archive file
     if not dry_run and archive_format!="null":
         logger.info("Creating archive")
         #If desiring to compress then change format to one with compression
@@ -294,13 +292,13 @@ def reapply_export(config:dict, dry_run:bool, backup_file_dir:str, profile_name:
             logger.error(f"aux_copy: Given source {source} doesn't exist")
 
     #Used for temporal_dir to ensure it is using an empty directory
-    def warn_if_dir_exists(dir:str, only_rename=False) -> str:
-        if os.path.exists(dir) and len(os.listdir(dir))>0:
-            new_path = dir+datetime.now().strftime("%d%m%Y_%H%M%S")
+    def warn_if_dir_exists(target:str, only_rename=False) -> str:
+        if os.path.exists(target) and len(os.listdir(target))>0:
+            new_path = target+datetime.now().strftime("%d%m%Y_%H%M%S")
             if not only_rename:
-                logger.warning(f"{dir} doesn't seem to be empty, instead moving to the new path: {new_path}")
+                logger.warning(f"{target} doesn't seem to be empty, instead moving to the new path: {new_path}")
             return new_path
-        return dir
+        return target
 
     # run
     logger.info(f"Preparing to reapply config for {profile_name} from backup")
@@ -340,7 +338,7 @@ def reapply_export(config:dict, dry_run:bool, backup_file_dir:str, profile_name:
         if len(files)>0 and files[0] == "__all__":
             source = os.path.join(temporal_dir, entry_name)
             dest = os.path.join(apply_to_location)
-            logger.debug(f'Applying all files...')
+            logger.debug('Applying all files...')
             if not dry_run:
                 aux_copy(source, dest)
             #Just testing, make sure apply_to_location and file exists and
@@ -353,7 +351,7 @@ def reapply_export(config:dict, dry_run:bool, backup_file_dir:str, profile_name:
         else:
             for file in files:
                 dest = os.path.join(apply_to_location, file)
-                #If file was given as an absolute path, only keep the filename, 
+                #If file was given as an absolute path, only keep the filename,
                 #it is assumed that if it comes as an absolute path then location is empty, thus "dest" must be defined before removing full path from file
                 if os.path.isabs(file):
                     file = os.path.splitext(os.path.basename(file))[0]
@@ -367,12 +365,10 @@ def reapply_export(config:dict, dry_run:bool, backup_file_dir:str, profile_name:
                         logger.error(f"{file} at {source} does not exist in backup file")
                     if not os.path.exists(apply_to_location):
                         logger.error(f"{apply_to_location} doesn't exists, continuing with dry-run")
-    
+
         #Delete specified files in entry
         to_delete = entry["delete"]
-        def aux_delete_file(action, name, exc):
-            os.remove(name)
-        
+
         for file in to_delete:
             dest = os.path.join(apply_to_location, file)
             if dry_run:
@@ -397,6 +393,6 @@ def reapply_export(config:dict, dry_run:bool, backup_file_dir:str, profile_name:
         logger.debug(f"Did not remove temporal directory: {aux_temporal_dir}")
 
     if dry_run:
-        logger.info(f"Dry-run completed, check previous errors")
+        logger.info("Dry-run completed, check previous errors")
     else:
-        logger.info(f"Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct")
+        logger.info("Remember that reapplying exports doesn't ensure the correct user/group permissions, specially if zip files, ensure that permissions are correct")
