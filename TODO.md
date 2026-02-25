@@ -16,3 +16,4 @@ DONES:
 -Allow specifying empty location and full path files in config --> Done, both for applying and exporting. If mixing full path file and non-empty location, file path takes precedence (due to how os.path.join prioritizes, there are no code baseguards so better not mix)
 -Test export_all with multiple profiles and check if it properly works with and without setting export_name --> (2026/02/17) All good except exporting all profiles with custom name, as it will be ignored and export with profile name
 -Add option to ensure removal of specific files when applying a profile
+-Better cli help text based on current konsave argument grouping

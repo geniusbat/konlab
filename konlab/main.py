@@ -18,7 +18,8 @@ def _get_parser() -> argparse.ArgumentParser:
     """
     parser = argparse.ArgumentParser(
         prog="Konlab",
-        epilog="Please report bugs at TODO:Add url to repo",
+        #epilog="Please report bugs at TODO:Add url to repo",
+        description="A CLI program oriented towards creating backups in homelabs with dispersed files"
     )
     parser.add_argument(
         "-c",
@@ -44,79 +45,6 @@ def _get_parser() -> argparse.ArgumentParser:
         metavar="<profile_name>",
     )
     parser.add_argument(
-        "-d",
-        "--directory",
-        required=False,
-        help="Specify where to export a profile or get backup data to reapply one",
-        metavar="<path>"
-    )
-    parser.add_argument(
-        "-e",
-        "--export-profile",
-        required=False,
-        type=str,
-        help=f"Export a specific profile, by default exports to {EXPORT_DIR}",
-        metavar="<name>",
-    )
-    parser.add_argument(
-        "--export-all",
-        required=False,
-        help=f"Export all profiles, by default exports to {EXPORT_DIR}",
-        action="store_true",
-    )
-    parser.add_argument(
-        "-n",
-        "--export-name",
-        required=False,
-        help="Specify the export name for the root folder when exporting a profile",
-        metavar="<archive-name>"
-    )
-    parser.add_argument(
-        "-z", "--compress", 
-        required=False,
-        action="store_true",
-        help="Add if desiring to compress output when exporting a profile"
-    )
-    parser.add_argument(
-        "-f",
-        "--format",
-        required=False,
-        help="""Specify the format type when archiving an exported profile,
-            if set to null it will export is a folder""",
-        metavar="<format-name>"
-    )
-    parser.add_argument(
-        "-a",
-        "--reapply-profile",
-        required=False,
-        type=str,
-        help="""Reapplies a specific profile to the necessary locations,
-            it requirest to be given the backup file to use (-d)""",
-        metavar="<name>",
-    )
-    parser.add_argument(
-        "--temp-dir",
-        required=False,
-        help="""Specify where to  hold profile files for reapplying a profile,
-            folder doesn't need to exist as script will create it,
-            if not specified it /tmp will be used""",
-        metavar="<temp-path>",
-        default=""
-    )
-    parser.add_argument(
-        "--no-clear",
-        required=False,
-        help="""If using --reapply-profile, tells it to not delete
-            temporal directory used to reapply files""",
-        action="store_true",
-    )
-    parser.add_argument(
-        "--dry-run",
-        required=False,
-        action="store_true",
-        help="Just test, do not actually do anything",
-    )
-    parser.add_argument(
         "--verbose", 
         "-v",
         required=False,
@@ -128,6 +56,83 @@ def _get_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--version", required=False, action="store_true", help="Show version"
+    )
+    #Add groups to parser
+    group_export = parser.add_argument_group("Exporting profiles")
+    group_reapply = parser.add_argument_group("Reapplying profiles")
+    options = parser.add_argument_group("Options")
+    options.add_argument(
+        "-d",
+        "--directory",
+        required=False,
+        help="Specify where to export a profile or get backup data to reapply one",
+        metavar="<path>"
+    )
+    group_export.add_argument(
+        "-e",
+        "--export-profile",
+        required=False,
+        type=str,
+        help=f"Export a specific profile, by default exports to {EXPORT_DIR}",
+        metavar="<name>",
+    )
+    group_export.add_argument(
+        "--export-all",
+        required=False,
+        help=f"Export all profiles, by default exports to {EXPORT_DIR}",
+        action="store_true",
+    )
+    options.add_argument(
+        "-n",
+        "--export-name",
+        required=False,
+        help="Specify the export name for the root folder when exporting a profile",
+        metavar="<archive-name>"
+    )
+    options.add_argument(
+        "-z", "--compress", 
+        required=False,
+        action="store_true",
+        help="Add if desiring to compress output when exporting a profile"
+    )
+    options.add_argument(
+        "-f",
+        "--format",
+        required=False,
+        help="""Specify the format type when archiving an exported profile,
+            if set to null it will export is a folder""",
+        metavar="<format-name>"
+    )
+    group_reapply.add_argument(
+        "-a",
+        "--reapply-profile",
+        required=False,
+        type=str,
+        help="""Reapplies a specific profile to the necessary locations,
+            it requirest to be given the backup file to use (-d)""",
+        metavar="<name>",
+    )
+    group_reapply.add_argument(
+        "--temp-dir",
+        required=False,
+        help="""Specify where to  hold profile files for reapplying a profile,
+            folder doesn't need to exist as script will create it,
+            if not specified it /tmp will be used""",
+        metavar="<temp-path>",
+        default=""
+    )
+    group_reapply.add_argument(
+        "--no-clear",
+        required=False,
+        help="""If using --reapply-profile, tells it to not delete
+            temporal directory used to reapply files""",
+        action="store_true",
+    )
+    options.add_argument(
+        "--dry-run",
+        required=False,
+        action="store_true",
+        help="Just test, do not actually do anything",
     )
     return parser
 
